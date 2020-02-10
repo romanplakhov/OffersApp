@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (4.9.0)
-  - Kingfisher (5.8.3):
-    - Kingfisher/Core (= 5.8.3)
-  - Kingfisher/Core (5.8.3)
+  - Alamofire (4.9.1)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
@@ -15,11 +15,11 @@ PODS:
   - ReachabilitySwift (5.0.0)
   - ReactiveSwift (5.0.1):
     - Result (~> 4.1)
-  - Realm (3.20.0):
-    - Realm/Headers (= 3.20.0)
-  - Realm/Headers (3.20.0)
-  - RealmSwift (3.20.0):
-    - Realm (= 3.20.0)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
   - Result (4.1.0)
   - SwiftyJSON (4.3.0)
 
@@ -29,34 +29,53 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - ReachabilitySwift
   - ReactiveSwift (~> 5.0)
-  - RealmSwift
+  - Realm (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
+  - RealmSwift (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Kingfisher
     - Moya
     - NVActivityIndicatorView
     - ReachabilitySwift
     - ReactiveSwift
-    - Realm
-    - RealmSwift
     - Result
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  Realm:
+    :branch: master
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
+  RealmSwift:
+    :branch: master
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  Realm:
+    :commit: ad6f5f94b023caaec57c99f7a986160f8c087d0c
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
+  RealmSwift:
+    :commit: ad6f5f94b023caaec57c99f7a986160f8c087d0c
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
+
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  ReactiveSwift: d4729875f9d2223ac901fd661f11f4e5738d505a
-  Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
-  RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
-  Result: 6ee5f7df63f0f96ede62ecd674d22324cd3a50de
-  SwiftyJSON: faa94d0cd9f36d02ec21de5245c593d71c9da886
+  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 9629ed51f9c48406f3881bf32d65b0d48a56c30f
+PODFILE CHECKSUM: 3100d6cae9ab2b1a38cd3bddab58200dcb9ffdf7
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

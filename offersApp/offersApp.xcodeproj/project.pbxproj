@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		7E85E01123F153960018E5C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E01023F153960018E5C9 /* ViewController.swift */; };
 		7E85E01623F1539B0018E5C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E01523F1539B0018E5C9 /* Assets.xcassets */; };
 		7E85E01923F1539B0018E5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E01723F1539B0018E5C9 /* LaunchScreen.storyboard */; };
+		7E85E02323F1622F0018E5C9 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02223F1622F0018E5C9 /* Database.swift */; };
+		7E85E02623F166C20018E5C9 /* MDPersonalPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7E85E01523F1539B0018E5C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E85E01823F1539B0018E5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E85E01A23F1539B0018E5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E85E02223F1622F0018E5C9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPersonalPromotion.swift; sourceTree = "<group>"; };
 		8E2C18672F6FF8EFE0959B92 /* Pods-offersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offersApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-offersApp/Pods-offersApp.release.xcconfig"; sourceTree = "<group>"; };
 		C472DD17AB57495A03186292 /* Pods_offersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_offersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +73,8 @@
 		7E85E00B23F153960018E5C9 /* offersApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E85E02123F161FC0018E5C9 /* Model */,
+				7E85E02023F161ED0018E5C9 /* Screens */,
 				7E85E00C23F153960018E5C9 /* AppDelegate.swift */,
 				7E85E00E23F153960018E5C9 /* SceneDelegate.swift */,
 				7E85E01023F153960018E5C9 /* ViewController.swift */,
@@ -77,6 +83,30 @@
 				7E85E01A23F1539B0018E5C9 /* Info.plist */,
 			);
 			path = offersApp;
+			sourceTree = "<group>";
+		};
+		7E85E02023F161ED0018E5C9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		7E85E02123F161FC0018E5C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E02423F164860018E5C9 /* PersonalPromotion */,
+				7E85E02223F1622F0018E5C9 /* Database.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E85E02423F164860018E5C9 /* PersonalPromotion */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */,
+			);
+			path = PersonalPromotion;
 			sourceTree = "<group>";
 		};
 		94C8F585DC1BCAA725E178DA /* Pods */ = {
@@ -184,38 +214,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-offersApp/Pods-offersApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-offersApp/Pods-offersApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-offersApp/Pods-offersApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-offersApp/Pods-offersApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-offersApp/Pods-offersApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -227,6 +234,8 @@
 			files = (
 				7E85E01123F153960018E5C9 /* ViewController.swift in Sources */,
 				7E85E00D23F153960018E5C9 /* AppDelegate.swift in Sources */,
+				7E85E02623F166C20018E5C9 /* MDPersonalPromotion.swift in Sources */,
+				7E85E02323F1622F0018E5C9 /* Database.swift in Sources */,
 				7E85E00F23F153960018E5C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
