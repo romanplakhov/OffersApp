@@ -1,0 +1,6 @@
+framework module Pods_offersApp {
+  umbrella header "Pods-offersApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,13 @@
+platform :ios, '10.3'
+
+target 'offersApp' do
+    use_frameworks!
+
+    pod 'ReactiveSwift', '~> 5.0'
+    pod 'Kingfisher', '~> 5.0'
+    pod 'Moya/ReactiveSwift', '~> 13.0'
+    pod 'RealmSwift'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'NVActivityIndicatorView'
+    pod 'ReachabilitySwift'
+end

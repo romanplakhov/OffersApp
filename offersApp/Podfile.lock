@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (4.9.0)
+  - Kingfisher (5.8.3):
+    - Kingfisher/Core (= 5.8.3)
+  - Kingfisher/Core (5.8.3)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/ReactiveSwift (13.0.1):
+    - Moya/Core
+    - ReactiveSwift (~> 5.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ReachabilitySwift (5.0.0)
+  - ReactiveSwift (5.0.1):
+    - Result (~> 4.1)
+  - Realm (3.20.0):
+    - Realm/Headers (= 3.20.0)
+  - Realm/Headers (3.20.0)
+  - RealmSwift (3.20.0):
+    - Realm (= 3.20.0)
+  - Result (4.1.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+  - Moya/ReactiveSwift (~> 13.0)
+  - NVActivityIndicatorView
+  - ReachabilitySwift
+  - ReactiveSwift (~> 5.0)
+  - RealmSwift
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - Moya
+    - NVActivityIndicatorView
+    - ReachabilitySwift
+    - ReactiveSwift
+    - Realm
+    - RealmSwift
+    - Result
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  ReactiveSwift: d4729875f9d2223ac901fd661f11f4e5738d505a
+  Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
+  RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
+  Result: 6ee5f7df63f0f96ede62ecd674d22324cd3a50de
+  SwiftyJSON: faa94d0cd9f36d02ec21de5245c593d71c9da886
+
+PODFILE CHECKSUM: 9629ed51f9c48406f3881bf32d65b0d48a56c30f
+
+COCOAPODS: 1.5.3
