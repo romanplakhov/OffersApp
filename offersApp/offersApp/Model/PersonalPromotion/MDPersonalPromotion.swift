@@ -53,33 +53,40 @@ class MDPersonalPromotion: Object {
 								   promoDescription: json["description"].stringValue,
 								   discount: json["discount"].stringValue,
 								   image: MDPromoImage.from(json["image"]),
-								   validityStartDate: json["validityStartDate"].intValue,
-								   validityEndDate: json["validityEndDate"].intValue,
+								   validityStartDate: json["validityStartDate"].stringValue,
+								   validityEndDate: json["validityEndDate"].stringValue,
 								   barcodeType: json["barcodeType"].stringValue,
 								   barcode: json["barcode"].stringValue,
 								   showExpirationTimer: json["showExpirationTime"].boolValue,
 								   offerType: json["offerType"].stringValue)
 	}
-
+	
+	private let dateFormatter: DateFormatter = {
+		let formatter = DateFormatter()
+		let utcStringTemplate = "yyyy-MM-dd'T'HH:mm:ssZ"
+		formatter.dateFormat = utcStringTemplate
+		return formatter
+	}()
+	
 	
 	@objc dynamic var promoId: Int = 0
 	@objc dynamic var title: String = ""
 	@objc dynamic var promoDescription: String = ""
 	@objc dynamic var discount: String = ""
 	@objc dynamic var image: MDPromoImage? = nil
-	@objc dynamic var validityStartDateOffset: Int = 0
-	@objc dynamic var validityEndDateOffset: Int = 0
+	@objc dynamic var validityStartDateUTC: String = ""
+	@objc dynamic var validityEndDateUTC: String = ""
 	@objc dynamic var barcodeType: String = ""
 	@objc dynamic var barcode: String = ""
 	@objc dynamic var showExpirationTimer: Bool = false
 	@objc dynamic var offerType: String = ""
 	
-	var validityStartDate: Date {
-		return Date(timeIntervalSince1970: TimeInterval(validityStartDateOffset))
+	var validityStartDate: Date? {
+		return dateFormatter.date(from: validityStartDateUTC)
 	}
 	
-	var validityEndDate: Date {
-		return Date(timeIntervalSince1970: TimeInterval(validityEndDateOffset))
+	var validityEndDate: Date? {
+		return dateFormatter.date(from: validityEndDateUTC)
 	}
 	
 	convenience init(promoId: Int,
@@ -87,8 +94,8 @@ class MDPersonalPromotion: Object {
 					 promoDescription: String,
 					 discount: String,
 					 image: MDPromoImage?,
-					 validityStartDate: Int,
-					 validityEndDate: Int,
+					 validityStartDate: String,
+					 validityEndDate: String,
 					 barcodeType: String,
 					 barcode: String,
 					 showExpirationTimer: Bool,
@@ -100,8 +107,8 @@ class MDPersonalPromotion: Object {
 		self.promoDescription = promoDescription
 		self.discount = discount
 		self.image = image
-		self.validityStartDateOffset = validityStartDate
-		self.validityEndDateOffset = validityEndDate
+		self.validityStartDateUTC = validityStartDate
+		self.validityEndDateUTC = validityEndDate
 		self.barcodeType = barcodeType
 		self.barcode = barcode
 		self.showExpirationTimer = showExpirationTimer

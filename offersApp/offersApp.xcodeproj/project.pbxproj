@@ -15,6 +15,10 @@
 		7E85E01923F1539B0018E5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E01723F1539B0018E5C9 /* LaunchScreen.storyboard */; };
 		7E85E02323F1622F0018E5C9 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02223F1622F0018E5C9 /* Database.swift */; };
 		7E85E02623F166C20018E5C9 /* MDPersonalPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */; };
+		7E85E02923F176810018E5C9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02823F176810018E5C9 /* Network.swift */; };
+		7E85E02B23F176B10018E5C9 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02A23F176B10018E5C9 /* MockNetwork.swift */; };
+		7E85E02D23F177220018E5C9 /* PromoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02C23F177220018E5C9 /* PromoDataProvider.swift */; };
+		7E85E02F23F179490018E5C9 /* MockPromoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E02E23F179490018E5C9 /* MockPromoData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		7E85E01A23F1539B0018E5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E85E02223F1622F0018E5C9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPersonalPromotion.swift; sourceTree = "<group>"; };
+		7E85E02823F176810018E5C9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7E85E02A23F176B10018E5C9 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
+		7E85E02C23F177220018E5C9 /* PromoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDataProvider.swift; sourceTree = "<group>"; };
+		7E85E02E23F179490018E5C9 /* MockPromoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPromoData.json; sourceTree = "<group>"; };
 		8E2C18672F6FF8EFE0959B92 /* Pods-offersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offersApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-offersApp/Pods-offersApp.release.xcconfig"; sourceTree = "<group>"; };
 		C472DD17AB57495A03186292 /* Pods_offersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_offersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,14 +81,16 @@
 		7E85E00B23F153960018E5C9 /* offersApp */ = {
 			isa = PBXGroup;
 			children = (
-				7E85E02123F161FC0018E5C9 /* Model */,
 				7E85E02023F161ED0018E5C9 /* Screens */,
+				7E85E02123F161FC0018E5C9 /* Model */,
+				7E85E02723F176470018E5C9 /* Services */,
 				7E85E00C23F153960018E5C9 /* AppDelegate.swift */,
 				7E85E00E23F153960018E5C9 /* SceneDelegate.swift */,
 				7E85E01023F153960018E5C9 /* ViewController.swift */,
 				7E85E01523F1539B0018E5C9 /* Assets.xcassets */,
 				7E85E01723F1539B0018E5C9 /* LaunchScreen.storyboard */,
 				7E85E01A23F1539B0018E5C9 /* Info.plist */,
+				7E85E02E23F179490018E5C9 /* MockPromoData.json */,
 			);
 			path = offersApp;
 			sourceTree = "<group>";
@@ -107,6 +117,16 @@
 				7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */,
 			);
 			path = PersonalPromotion;
+			sourceTree = "<group>";
+		};
+		7E85E02723F176470018E5C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E02823F176810018E5C9 /* Network.swift */,
+				7E85E02A23F176B10018E5C9 /* MockNetwork.swift */,
+				7E85E02C23F177220018E5C9 /* PromoDataProvider.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		94C8F585DC1BCAA725E178DA /* Pods */ = {
@@ -179,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E85E01923F1539B0018E5C9 /* LaunchScreen.storyboard in Resources */,
+				7E85E02F23F179490018E5C9 /* MockPromoData.json in Resources */,
 				7E85E01623F1539B0018E5C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +255,10 @@
 			files = (
 				7E85E01123F153960018E5C9 /* ViewController.swift in Sources */,
 				7E85E00D23F153960018E5C9 /* AppDelegate.swift in Sources */,
+				7E85E02923F176810018E5C9 /* Network.swift in Sources */,
 				7E85E02623F166C20018E5C9 /* MDPersonalPromotion.swift in Sources */,
+				7E85E02D23F177220018E5C9 /* PromoDataProvider.swift in Sources */,
+				7E85E02B23F176B10018E5C9 /* MockNetwork.swift in Sources */,
 				7E85E02323F1622F0018E5C9 /* Database.swift in Sources */,
 				7E85E00F23F153960018E5C9 /* SceneDelegate.swift in Sources */,
 			);
