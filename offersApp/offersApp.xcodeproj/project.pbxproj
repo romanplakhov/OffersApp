@@ -8,34 +8,132 @@
 
 /* Begin PBXBuildFile section */
 		0E31E97D97B3AD5B0131E16B /* Pods_offersApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C472DD17AB57495A03186292 /* Pods_offersApp.framework */; };
+		7E1DAEED23F544A10074041B /* DataTransformHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEEC23F544A10074041B /* DataTransformHelper.swift */; };
+		7E1DAEEF23F558A30074041B /* PromotionDetailsPagerTabStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEEE23F558A30074041B /* PromotionDetailsPagerTabStrip.swift */; };
+		7E1DAEF323F55AC50074041B /* MainPromotionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEF123F55AC50074041B /* MainPromotionInfoViewController.swift */; };
+		7E1DAEF423F55AC50074041B /* MainPromotionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DAEF223F55AC50074041B /* MainPromotionInfoViewController.xib */; };
+		7E1DAEF723F564930074041B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEF623F564930074041B /* ActionButton.swift */; };
+		7E1DAEF923F56AD80074041B /* MainPromotionInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEF823F56AD80074041B /* MainPromotionInfoViewModel.swift */; };
+		7E1DAEFD23F581960074041B /* PromotionDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEFB23F581960074041B /* PromotionDescriptionViewController.swift */; };
+		7E1DAEFE23F581960074041B /* PromotionDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DAEFC23F581960074041B /* PromotionDescriptionViewController.xib */; };
+		7E1DAF0023F581B40074041B /* PromotionDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAEFF23F581B40074041B /* PromotionDescriptionViewModel.swift */; };
+		7E1DAF0223F582710074041B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DAF0123F582710074041B /* String.swift */; };
+		7E60476923F84287007A3578 /* ActivePromotionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60476823F84287007A3578 /* ActivePromotionsManager.swift */; };
+		7E60476C23F9A3EB007A3578 /* DiscountRibbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60476B23F9A3EB007A3578 /* DiscountRibbon.swift */; };
+		7E60476E23F9A428007A3578 /* DiscountRibbon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E60476D23F9A428007A3578 /* DiscountRibbon.xib */; };
+		7E60477123FAC671007A3578 /* UserDefaultsActivePromotionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60477023FAC671007A3578 /* UserDefaultsActivePromotionsManager.swift */; };
+		7E60477323FAD5E6007A3578 /* ViewControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60477223FAD5E6007A3578 /* ViewControllersProvider.swift */; };
+		7E60477623FAD7E4007A3578 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60477523FAD7E4007A3578 /* Repository.swift */; };
 		7E85E00D23F153960018E5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E00C23F153960018E5C9 /* AppDelegate.swift */; };
-		7E85E00F23F153960018E5C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E00E23F153960018E5C9 /* SceneDelegate.swift */; };
-		7E85E01123F153960018E5C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E01023F153960018E5C9 /* ViewController.swift */; };
 		7E85E01623F1539B0018E5C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E01523F1539B0018E5C9 /* Assets.xcassets */; };
 		7E85E01923F1539B0018E5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E01723F1539B0018E5C9 /* LaunchScreen.storyboard */; };
-		7E85E02323F1622F0018E5C9 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02223F1622F0018E5C9 /* Database.swift */; };
+		7E85E02323F1622F0018E5C9 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02223F1622F0018E5C9 /* RealmRepository.swift */; };
 		7E85E02623F166C20018E5C9 /* MDPersonalPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */; };
 		7E85E02923F176810018E5C9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02823F176810018E5C9 /* Network.swift */; };
 		7E85E02B23F176B10018E5C9 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02A23F176B10018E5C9 /* MockNetwork.swift */; };
 		7E85E02D23F177220018E5C9 /* PromoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E02C23F177220018E5C9 /* PromoDataProvider.swift */; };
 		7E85E02F23F179490018E5C9 /* MockPromoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E02E23F179490018E5C9 /* MockPromoData.json */; };
+		7E85E03223F1835B0018E5C9 /* PromotionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E03023F1835B0018E5C9 /* PromotionsListViewController.swift */; };
+		7E85E03323F1835B0018E5C9 /* PromotionsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E03123F1835B0018E5C9 /* PromotionsListViewController.xib */; };
+		7E85E03523F1836D0018E5C9 /* PromotionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E03423F1836D0018E5C9 /* PromotionsListViewModel.swift */; };
+		7E85E03923F18D2C0018E5C9 /* PromotionsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E03723F18D2C0018E5C9 /* PromotionsListTableViewCell.swift */; };
+		7E85E03A23F18D2C0018E5C9 /* PromotionsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E03823F18D2C0018E5C9 /* PromotionsListTableViewCell.xib */; };
+		7E85E03D23F1B7440018E5C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E03C23F1B7440018E5C9 /* MainViewController.swift */; };
+		7E85E04023F1BCAC0018E5C9 /* RedirectSignalsReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E03F23F1BCAC0018E5C9 /* RedirectSignalsReceiver.swift */; };
+		7E85E04223F1BD150018E5C9 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E04123F1BD150018E5C9 /* ScreenState.swift */; };
+		7E85E04723F1BEE10018E5C9 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E04623F1BEE10018E5C9 /* DependencyContainer.swift */; };
+		7E85E04B23F2A8270018E5C9 /* PromotionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E04923F2A8270018E5C9 /* PromotionDetailsViewController.swift */; };
+		7E85E04C23F2A8270018E5C9 /* PromotionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E04A23F2A8270018E5C9 /* PromotionDetailsViewController.xib */; };
+		7E85E04E23F2A8410018E5C9 /* PromotionDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E04D23F2A8410018E5C9 /* PromotionDetailsViewModel.swift */; };
+		7E85E06723F3F7720018E5C9 /* PromotionsListPagerTabStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E06623F3F7720018E5C9 /* PromotionsListPagerTabStrip.swift */; };
+		7E85E06A23F3FD1B0018E5C9 /* RedirectSignalsProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E06923F3FD1B0018E5C9 /* RedirectSignalsProducer.swift */; };
+		7E85E06F23F411F40018E5C9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E06E23F411F40018E5C9 /* Config.swift */; };
+		7E85E07123F412FE0018E5C9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E07023F412EB0018E5C9 /* Montserrat-Regular.ttf */; };
+		7E85E0BB23F41EF20018E5C9 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0A823F41EF20018E5C9 /* LICENSE */; };
+		7E85E0BC23F41EF20018E5C9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0A923F41EF20018E5C9 /* README.md */; };
+		7E85E0BD23F41EF20018E5C9 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0AB23F41EF20018E5C9 /* ButtonCell.xib */; };
+		7E85E0BE23F41EF20018E5C9 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0AC23F41EF20018E5C9 /* SwipeDirection.swift */; };
+		7E85E0C023F41EF20018E5C9 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0AE23F41EF20018E5C9 /* IndicatorInfo.swift */; };
+		7E85E0C223F41EF20018E5C9 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B023F41EF20018E5C9 /* SegmentedPagerTabStripViewController.swift */; };
+		7E85E0C323F41EF20018E5C9 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B123F41EF20018E5C9 /* ButtonBarView.swift */; };
+		7E85E0C423F41EF20018E5C9 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B223F41EF20018E5C9 /* BarView.swift */; };
+		7E85E0C523F41EF20018E5C9 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B323F41EF20018E5C9 /* PagerTabStripBehaviour.swift */; };
+		7E85E0C623F41EF20018E5C9 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B423F41EF20018E5C9 /* ButtonBarViewCell.swift */; };
+		7E85E0C723F41EF20018E5C9 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B623F41EF20018E5C9 /* PagerTabStripError.swift */; };
+		7E85E0C823F41EF20018E5C9 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B723F41EF20018E5C9 /* BarPagerTabStripViewController.swift */; };
+		7E85E0C923F41EF20018E5C9 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B823F41EF20018E5C9 /* PagerTabStripViewController.swift */; };
+		7E85E0CA23F41EF20018E5C9 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0B923F41EF20018E5C9 /* BaseButtonBarPagerTabStripViewController.swift */; };
+		7E85E0CB23F41EF20018E5C9 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0BA23F41EF20018E5C9 /* ButtonBarPagerTabStripViewController.swift */; };
+		7E85E0CE23F424540018E5C9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0CD23F424540018E5C9 /* UIColor.swift */; };
+		7E85E0D023F427430018E5C9 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0CF23F4267B0018E5C9 /* Montserrat-Medium.ttf */; };
+		7E85E0D323F42E550018E5C9 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0D223F42E550018E5C9 /* BadgeView.swift */; };
+		7E85E0D623F434650018E5C9 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0D123F42DED0018E5C9 /* Montserrat-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F5688FF74D5F7F1DC9142E6 /* Pods-offersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offersApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-offersApp/Pods-offersApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7E1DAEEC23F544A10074041B /* DataTransformHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformHelper.swift; sourceTree = "<group>"; };
+		7E1DAEEE23F558A30074041B /* PromotionDetailsPagerTabStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDetailsPagerTabStrip.swift; sourceTree = "<group>"; };
+		7E1DAEF123F55AC50074041B /* MainPromotionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPromotionInfoViewController.swift; sourceTree = "<group>"; };
+		7E1DAEF223F55AC50074041B /* MainPromotionInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPromotionInfoViewController.xib; sourceTree = "<group>"; };
+		7E1DAEF623F564930074041B /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		7E1DAEF823F56AD80074041B /* MainPromotionInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPromotionInfoViewModel.swift; sourceTree = "<group>"; };
+		7E1DAEFB23F581960074041B /* PromotionDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDescriptionViewController.swift; sourceTree = "<group>"; };
+		7E1DAEFC23F581960074041B /* PromotionDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionDescriptionViewController.xib; sourceTree = "<group>"; };
+		7E1DAEFF23F581B40074041B /* PromotionDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDescriptionViewModel.swift; sourceTree = "<group>"; };
+		7E1DAF0123F582710074041B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7E60476823F84287007A3578 /* ActivePromotionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePromotionsManager.swift; sourceTree = "<group>"; };
+		7E60476B23F9A3EB007A3578 /* DiscountRibbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountRibbon.swift; sourceTree = "<group>"; };
+		7E60476D23F9A428007A3578 /* DiscountRibbon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountRibbon.xib; sourceTree = "<group>"; };
+		7E60477023FAC671007A3578 /* UserDefaultsActivePromotionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsActivePromotionsManager.swift; sourceTree = "<group>"; };
+		7E60477223FAD5E6007A3578 /* ViewControllersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersProvider.swift; sourceTree = "<group>"; };
+		7E60477523FAD7E4007A3578 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		7E85E00923F153960018E5C9 /* offersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = offersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E85E00C23F153960018E5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E85E00E23F153960018E5C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E85E01023F153960018E5C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E85E01523F1539B0018E5C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E85E01823F1539B0018E5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E85E01A23F1539B0018E5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E85E02223F1622F0018E5C9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		7E85E02223F1622F0018E5C9 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		7E85E02523F166C20018E5C9 /* MDPersonalPromotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPersonalPromotion.swift; sourceTree = "<group>"; };
 		7E85E02823F176810018E5C9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		7E85E02A23F176B10018E5C9 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		7E85E02C23F177220018E5C9 /* PromoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDataProvider.swift; sourceTree = "<group>"; };
 		7E85E02E23F179490018E5C9 /* MockPromoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPromoData.json; sourceTree = "<group>"; };
+		7E85E03023F1835B0018E5C9 /* PromotionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsListViewController.swift; sourceTree = "<group>"; };
+		7E85E03123F1835B0018E5C9 /* PromotionsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsListViewController.xib; sourceTree = "<group>"; };
+		7E85E03423F1836D0018E5C9 /* PromotionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsListViewModel.swift; sourceTree = "<group>"; };
+		7E85E03723F18D2C0018E5C9 /* PromotionsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsListTableViewCell.swift; sourceTree = "<group>"; };
+		7E85E03823F18D2C0018E5C9 /* PromotionsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsListTableViewCell.xib; sourceTree = "<group>"; };
+		7E85E03C23F1B7440018E5C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7E85E03F23F1BCAC0018E5C9 /* RedirectSignalsReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectSignalsReceiver.swift; sourceTree = "<group>"; };
+		7E85E04123F1BD150018E5C9 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		7E85E04623F1BEE10018E5C9 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		7E85E04923F2A8270018E5C9 /* PromotionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDetailsViewController.swift; sourceTree = "<group>"; };
+		7E85E04A23F2A8270018E5C9 /* PromotionDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionDetailsViewController.xib; sourceTree = "<group>"; };
+		7E85E04D23F2A8410018E5C9 /* PromotionDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDetailsViewModel.swift; sourceTree = "<group>"; };
+		7E85E06623F3F7720018E5C9 /* PromotionsListPagerTabStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsListPagerTabStrip.swift; sourceTree = "<group>"; };
+		7E85E06923F3FD1B0018E5C9 /* RedirectSignalsProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectSignalsProducer.swift; sourceTree = "<group>"; };
+		7E85E06E23F411F40018E5C9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7E85E07023F412EB0018E5C9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		7E85E0A823F41EF20018E5C9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7E85E0A923F41EF20018E5C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7E85E0AB23F41EF20018E5C9 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		7E85E0AC23F41EF20018E5C9 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		7E85E0AE23F41EF20018E5C9 /* IndicatorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorInfo.swift; sourceTree = "<group>"; };
+		7E85E0B023F41EF20018E5C9 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		7E85E0B123F41EF20018E5C9 /* ButtonBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
+		7E85E0B223F41EF20018E5C9 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		7E85E0B323F41EF20018E5C9 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
+		7E85E0B423F41EF20018E5C9 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		7E85E0B623F41EF20018E5C9 /* PagerTabStripError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripError.swift; sourceTree = "<group>"; };
+		7E85E0B723F41EF20018E5C9 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		7E85E0B823F41EF20018E5C9 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		7E85E0B923F41EF20018E5C9 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		7E85E0BA23F41EF20018E5C9 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		7E85E0CD23F424540018E5C9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7E85E0CF23F4267B0018E5C9 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		7E85E0D123F42DED0018E5C9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		7E85E0D223F42E550018E5C9 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		8E2C18672F6FF8EFE0959B92 /* Pods-offersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offersApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-offersApp/Pods-offersApp.release.xcconfig"; sourceTree = "<group>"; };
 		C472DD17AB57495A03186292 /* Pods_offersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_offersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -60,6 +158,78 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E1DAEEB23F544540074041B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E1DAEEC23F544A10074041B /* DataTransformHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7E1DAEF023F559BA0074041B /* MainPromotionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7E1DAEF123F55AC50074041B /* MainPromotionInfoViewController.swift */,
+				7E1DAEF223F55AC50074041B /* MainPromotionInfoViewController.xib */,
+				7E1DAEF823F56AD80074041B /* MainPromotionInfoViewModel.swift */,
+			);
+			path = MainPromotionInfo;
+			sourceTree = "<group>";
+		};
+		7E1DAEF523F5647C0074041B /* ActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				7E1DAEF623F564930074041B /* ActionButton.swift */,
+			);
+			path = ActionButton;
+			sourceTree = "<group>";
+		};
+		7E1DAEFA23F57D490074041B /* PromotionDescription */ = {
+			isa = PBXGroup;
+			children = (
+				7E1DAEFB23F581960074041B /* PromotionDescriptionViewController.swift */,
+				7E1DAEFC23F581960074041B /* PromotionDescriptionViewController.xib */,
+				7E1DAEFF23F581B40074041B /* PromotionDescriptionViewModel.swift */,
+			);
+			path = PromotionDescription;
+			sourceTree = "<group>";
+		};
+		7E60476723F84265007A3578 /* ActivePromotionsManager */ = {
+			isa = PBXGroup;
+			children = (
+				7E60476823F84287007A3578 /* ActivePromotionsManager.swift */,
+				7E60477023FAC671007A3578 /* UserDefaultsActivePromotionsManager.swift */,
+			);
+			path = ActivePromotionsManager;
+			sourceTree = "<group>";
+		};
+		7E60476A23F9A3D3007A3578 /* DiscountRibbon */ = {
+			isa = PBXGroup;
+			children = (
+				7E60476B23F9A3EB007A3578 /* DiscountRibbon.swift */,
+				7E60476D23F9A428007A3578 /* DiscountRibbon.xib */,
+			);
+			path = DiscountRibbon;
+			sourceTree = "<group>";
+		};
+		7E60476F23FAC54B007A3578 /* DependecyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E04623F1BEE10018E5C9 /* DependencyContainer.swift */,
+				7E60477223FAD5E6007A3578 /* ViewControllersProvider.swift */,
+			);
+			path = DependecyInjection;
+			sourceTree = "<group>";
+		};
+		7E60477423FAD7BC007A3578 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E02223F1622F0018E5C9 /* RealmRepository.swift */,
+				7E60477523FAD7E4007A3578 /* Repository.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		7E85E00023F153960018E5C9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,16 +251,16 @@
 		7E85E00B23F153960018E5C9 /* offersApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E85E0CC23F4243B0018E5C9 /* Extensions */,
+				7E85E07223F41D4E0018E5C9 /* ThirdParty */,
+				7E85E06B23F411340018E5C9 /* Resources */,
+				7E85E06323F3F06B0018E5C9 /* View */,
 				7E85E02023F161ED0018E5C9 /* Screens */,
+				7E85E03E23F1BC6E0018E5C9 /* Common */,
 				7E85E02123F161FC0018E5C9 /* Model */,
 				7E85E02723F176470018E5C9 /* Services */,
 				7E85E00C23F153960018E5C9 /* AppDelegate.swift */,
-				7E85E00E23F153960018E5C9 /* SceneDelegate.swift */,
-				7E85E01023F153960018E5C9 /* ViewController.swift */,
-				7E85E01523F1539B0018E5C9 /* Assets.xcassets */,
-				7E85E01723F1539B0018E5C9 /* LaunchScreen.storyboard */,
 				7E85E01A23F1539B0018E5C9 /* Info.plist */,
-				7E85E02E23F179490018E5C9 /* MockPromoData.json */,
 			);
 			path = offersApp;
 			sourceTree = "<group>";
@@ -98,6 +268,9 @@
 		7E85E02023F161ED0018E5C9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7E85E04823F2A7E40018E5C9 /* PromotionDetails */,
+				7E85E03B23F1B71F0018E5C9 /* PromotionsList */,
+				7E85E03C23F1B7440018E5C9 /* MainViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -105,8 +278,8 @@
 		7E85E02123F161FC0018E5C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E60477423FAD7BC007A3578 /* Database */,
 				7E85E02423F164860018E5C9 /* PersonalPromotion */,
-				7E85E02223F1622F0018E5C9 /* Database.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +300,156 @@
 				7E85E02C23F177220018E5C9 /* PromoDataProvider.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7E85E03623F18CB80018E5C9 /* PromotionListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E03723F18D2C0018E5C9 /* PromotionsListTableViewCell.swift */,
+				7E85E03823F18D2C0018E5C9 /* PromotionsListTableViewCell.xib */,
+			);
+			path = PromotionListTableViewCell;
+			sourceTree = "<group>";
+		};
+		7E85E03B23F1B71F0018E5C9 /* PromotionsList */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E03623F18CB80018E5C9 /* PromotionListTableViewCell */,
+				7E85E03023F1835B0018E5C9 /* PromotionsListViewController.swift */,
+				7E85E03123F1835B0018E5C9 /* PromotionsListViewController.xib */,
+				7E85E03423F1836D0018E5C9 /* PromotionsListViewModel.swift */,
+				7E85E06623F3F7720018E5C9 /* PromotionsListPagerTabStrip.swift */,
+			);
+			path = PromotionsList;
+			sourceTree = "<group>";
+		};
+		7E85E03E23F1BC6E0018E5C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7E60476F23FAC54B007A3578 /* DependecyInjection */,
+				7E60476723F84265007A3578 /* ActivePromotionsManager */,
+				7E1DAEEB23F544540074041B /* Helpers */,
+				7E85E03F23F1BCAC0018E5C9 /* RedirectSignalsReceiver.swift */,
+				7E85E04123F1BD150018E5C9 /* ScreenState.swift */,
+				7E85E06923F3FD1B0018E5C9 /* RedirectSignalsProducer.swift */,
+				7E85E06E23F411F40018E5C9 /* Config.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7E85E04823F2A7E40018E5C9 /* PromotionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7E1DAEFA23F57D490074041B /* PromotionDescription */,
+				7E1DAEF023F559BA0074041B /* MainPromotionInfo */,
+				7E85E04923F2A8270018E5C9 /* PromotionDetailsViewController.swift */,
+				7E85E04A23F2A8270018E5C9 /* PromotionDetailsViewController.xib */,
+				7E85E04D23F2A8410018E5C9 /* PromotionDetailsViewModel.swift */,
+				7E1DAEEE23F558A30074041B /* PromotionDetailsPagerTabStrip.swift */,
+			);
+			path = PromotionDetails;
+			sourceTree = "<group>";
+		};
+		7E85E06323F3F06B0018E5C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E06423F3F0F20018E5C9 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E85E06423F3F0F20018E5C9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E60476A23F9A3D3007A3578 /* DiscountRibbon */,
+				7E1DAEF523F5647C0074041B /* ActionButton */,
+				7E85E06523F3F11E0018E5C9 /* Badge */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7E85E06523F3F11E0018E5C9 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E0D223F42E550018E5C9 /* BadgeView.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
+		7E85E06B23F411340018E5C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E01523F1539B0018E5C9 /* Assets.xcassets */,
+				7E85E01723F1539B0018E5C9 /* LaunchScreen.storyboard */,
+				7E85E06D23F411460018E5C9 /* Stubs */,
+				7E85E06C23F4113B0018E5C9 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E85E06C23F4113B0018E5C9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E07023F412EB0018E5C9 /* Montserrat-Regular.ttf */,
+				7E85E0CF23F4267B0018E5C9 /* Montserrat-Medium.ttf */,
+				7E85E0D123F42DED0018E5C9 /* Montserrat-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7E85E06D23F411460018E5C9 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E02E23F179490018E5C9 /* MockPromoData.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		7E85E07223F41D4E0018E5C9 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E0A723F41EF20018E5C9 /* XLPagerTabStrip */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		7E85E0A723F41EF20018E5C9 /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E0A823F41EF20018E5C9 /* LICENSE */,
+				7E85E0A923F41EF20018E5C9 /* README.md */,
+				7E85E0AA23F41EF20018E5C9 /* Sources */,
+			);
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		7E85E0AA23F41EF20018E5C9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E0AB23F41EF20018E5C9 /* ButtonCell.xib */,
+				7E85E0AC23F41EF20018E5C9 /* SwipeDirection.swift */,
+				7E85E0AE23F41EF20018E5C9 /* IndicatorInfo.swift */,
+				7E85E0B023F41EF20018E5C9 /* SegmentedPagerTabStripViewController.swift */,
+				7E85E0B123F41EF20018E5C9 /* ButtonBarView.swift */,
+				7E85E0B223F41EF20018E5C9 /* BarView.swift */,
+				7E85E0B323F41EF20018E5C9 /* PagerTabStripBehaviour.swift */,
+				7E85E0B423F41EF20018E5C9 /* ButtonBarViewCell.swift */,
+				7E85E0B623F41EF20018E5C9 /* PagerTabStripError.swift */,
+				7E85E0B723F41EF20018E5C9 /* BarPagerTabStripViewController.swift */,
+				7E85E0B823F41EF20018E5C9 /* PagerTabStripViewController.swift */,
+				7E85E0B923F41EF20018E5C9 /* BaseButtonBarPagerTabStripViewController.swift */,
+				7E85E0BA23F41EF20018E5C9 /* ButtonBarPagerTabStripViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7E85E0CC23F4243B0018E5C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E0CD23F424540018E5C9 /* UIColor.swift */,
+				7E1DAF0123F582710074041B /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		94C8F585DC1BCAA725E178DA /* Pods */ = {
@@ -198,9 +521,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E85E0D623F434650018E5C9 /* Montserrat-Bold.ttf in Resources */,
+				7E85E0D023F427430018E5C9 /* Montserrat-Medium.ttf in Resources */,
+				7E85E07123F412FE0018E5C9 /* Montserrat-Regular.ttf in Resources */,
+				7E85E03323F1835B0018E5C9 /* PromotionsListViewController.xib in Resources */,
+				7E85E0BD23F41EF20018E5C9 /* ButtonCell.xib in Resources */,
+				7E60476E23F9A428007A3578 /* DiscountRibbon.xib in Resources */,
 				7E85E01923F1539B0018E5C9 /* LaunchScreen.storyboard in Resources */,
+				7E1DAEF423F55AC50074041B /* MainPromotionInfoViewController.xib in Resources */,
 				7E85E02F23F179490018E5C9 /* MockPromoData.json in Resources */,
+				7E85E0BB23F41EF20018E5C9 /* LICENSE in Resources */,
+				7E1DAEFE23F581960074041B /* PromotionDescriptionViewController.xib in Resources */,
+				7E85E0BC23F41EF20018E5C9 /* README.md in Resources */,
 				7E85E01623F1539B0018E5C9 /* Assets.xcassets in Resources */,
+				7E85E03A23F18D2C0018E5C9 /* PromotionsListTableViewCell.xib in Resources */,
+				7E85E04C23F2A8270018E5C9 /* PromotionDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +588,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E85E01123F153960018E5C9 /* ViewController.swift in Sources */,
+				7E85E0C223F41EF20018E5C9 /* SegmentedPagerTabStripViewController.swift in Sources */,
+				7E85E04023F1BCAC0018E5C9 /* RedirectSignalsReceiver.swift in Sources */,
+				7E1DAF0223F582710074041B /* String.swift in Sources */,
+				7E1DAEF923F56AD80074041B /* MainPromotionInfoViewModel.swift in Sources */,
+				7E85E04723F1BEE10018E5C9 /* DependencyContainer.swift in Sources */,
+				7E85E0C723F41EF20018E5C9 /* PagerTabStripError.swift in Sources */,
+				7E85E0C023F41EF20018E5C9 /* IndicatorInfo.swift in Sources */,
+				7E85E0CA23F41EF20018E5C9 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				7E85E0CE23F424540018E5C9 /* UIColor.swift in Sources */,
+				7E60477623FAD7E4007A3578 /* Repository.swift in Sources */,
 				7E85E00D23F153960018E5C9 /* AppDelegate.swift in Sources */,
+				7E1DAEFD23F581960074041B /* PromotionDescriptionViewController.swift in Sources */,
+				7E60477123FAC671007A3578 /* UserDefaultsActivePromotionsManager.swift in Sources */,
+				7E85E06F23F411F40018E5C9 /* Config.swift in Sources */,
+				7E85E0C923F41EF20018E5C9 /* PagerTabStripViewController.swift in Sources */,
+				7E60477323FAD5E6007A3578 /* ViewControllersProvider.swift in Sources */,
+				7E85E04223F1BD150018E5C9 /* ScreenState.swift in Sources */,
+				7E1DAEED23F544A10074041B /* DataTransformHelper.swift in Sources */,
+				7E85E03923F18D2C0018E5C9 /* PromotionsListTableViewCell.swift in Sources */,
+				7E1DAEEF23F558A30074041B /* PromotionDetailsPagerTabStrip.swift in Sources */,
+				7E1DAEF323F55AC50074041B /* MainPromotionInfoViewController.swift in Sources */,
+				7E1DAEF723F564930074041B /* ActionButton.swift in Sources */,
+				7E85E0D323F42E550018E5C9 /* BadgeView.swift in Sources */,
+				7E85E0C323F41EF20018E5C9 /* ButtonBarView.swift in Sources */,
+				7E85E03D23F1B7440018E5C9 /* MainViewController.swift in Sources */,
 				7E85E02923F176810018E5C9 /* Network.swift in Sources */,
+				7E60476923F84287007A3578 /* ActivePromotionsManager.swift in Sources */,
+				7E85E0C823F41EF20018E5C9 /* BarPagerTabStripViewController.swift in Sources */,
+				7E85E06723F3F7720018E5C9 /* PromotionsListPagerTabStrip.swift in Sources */,
+				7E85E04E23F2A8410018E5C9 /* PromotionDetailsViewModel.swift in Sources */,
 				7E85E02623F166C20018E5C9 /* MDPersonalPromotion.swift in Sources */,
+				7E85E0BE23F41EF20018E5C9 /* SwipeDirection.swift in Sources */,
+				7E85E0CB23F41EF20018E5C9 /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				7E85E03523F1836D0018E5C9 /* PromotionsListViewModel.swift in Sources */,
+				7E60476C23F9A3EB007A3578 /* DiscountRibbon.swift in Sources */,
+				7E85E0C623F41EF20018E5C9 /* ButtonBarViewCell.swift in Sources */,
+				7E85E0C523F41EF20018E5C9 /* PagerTabStripBehaviour.swift in Sources */,
 				7E85E02D23F177220018E5C9 /* PromoDataProvider.swift in Sources */,
+				7E85E04B23F2A8270018E5C9 /* PromotionDetailsViewController.swift in Sources */,
 				7E85E02B23F176B10018E5C9 /* MockNetwork.swift in Sources */,
-				7E85E02323F1622F0018E5C9 /* Database.swift in Sources */,
-				7E85E00F23F153960018E5C9 /* SceneDelegate.swift in Sources */,
+				7E85E06A23F3FD1B0018E5C9 /* RedirectSignalsProducer.swift in Sources */,
+				7E85E0C423F41EF20018E5C9 /* BarView.swift in Sources */,
+				7E1DAF0023F581B40074041B /* PromotionDescriptionViewModel.swift in Sources */,
+				7E85E02323F1622F0018E5C9 /* RealmRepository.swift in Sources */,
+				7E85E03223F1835B0018E5C9 /* PromotionsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

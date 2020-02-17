@@ -13,6 +13,8 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
   - ReachabilitySwift (5.0.0)
+  - ReactiveCocoa (9.0.0):
+    - ReactiveSwift (~> 5.0)
   - ReactiveSwift (5.0.1):
     - Result (~> 4.1)
   - Realm (4.3.2):
@@ -21,17 +23,23 @@ PODS:
   - RealmSwift (4.3.2):
     - Realm (= 4.3.2)
   - Result (4.1.0)
+  - RSBarcodes_Swift (5.0.0)
   - SwiftyJSON (4.3.0)
+  - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - Moya/ReactiveSwift (~> 13.0)
   - NVActivityIndicatorView
   - ReachabilitySwift
+  - ReactiveCocoa (~> 9.0.0)
   - ReactiveSwift (~> 5.0)
   - Realm (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
   - RealmSwift (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
+  - Result (~> 4.1)
+  - RSBarcodes_Swift
   - SwiftyJSON (~> 4.0)
+  - SwipeCellKit
 
 SPEC REPOS:
   trunk:
@@ -40,9 +48,12 @@ SPEC REPOS:
     - Moya
     - NVActivityIndicatorView
     - ReachabilitySwift
+    - ReactiveCocoa
     - ReactiveSwift
     - Result
+    - RSBarcodes_Swift
     - SwiftyJSON
+    - SwipeCellKit
 
 EXTERNAL SOURCES:
   Realm:
@@ -70,12 +81,15 @@ SPEC CHECKSUMS:
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
   ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
   Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
   RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RSBarcodes_Swift: b6bee284eef3ee27f67fabb0d7f07459ed68a3de
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: 3100d6cae9ab2b1a38cd3bddab58200dcb9ffdf7
+PODFILE CHECKSUM: e8b3aa29dcf956b86f899f705478a833af0ad00c
 
 COCOAPODS: 1.8.4

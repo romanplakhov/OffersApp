@@ -9,13 +9,13 @@
 import Foundation
 import RealmSwift
 
-protocol RealmDatabaseModel {
+class RealmRepository<T: Object>: DatabaseInstance {
 	
-}
-
-class Database<T> where T: Object {
-	
-	lazy var realm = try! Realm()
+	lazy var realm: Realm = {
+		let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+		Realm.Configuration.defaultConfiguration = config
+		return try! Realm()
+	}()
 	
 	func update(item: T) {
 		try? realm.write {
@@ -23,7 +23,7 @@ class Database<T> where T: Object {
 		}
 	}
     
-    func add(item: T) {
+	func add(item: T) {
         try? realm.write {
             realm.add(item)
         }
@@ -63,11 +63,6 @@ class Database<T> where T: Object {
         return realm.object(ofType: T.self, forPrimaryKey: primaryKey)
     }
 	
-	func updateValue(_ completion: @escaping ()->()) {
-		try? realm.write {
-			completion()
-		}
-	}
 }
 
 

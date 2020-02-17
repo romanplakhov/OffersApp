@@ -14,42 +14,10 @@ import ReactiveSwift
 import UIKit
 
 class MDPersonalPromotion: Object {
-	class MDPromoImage: Object {
-		
-		static func from(_ json: JSON) -> MDPromoImage {
-			return MDPromoImage(thumbnail: json["thumbnail"].stringValue,
-								medium: json["medium"].stringValue,
-								fullSize: json["fullSize"].stringValue,
-								mediumLossy: json["mediumLossy"].stringValue)
-		}
-		
-		
-		@objc dynamic var thumbnail: String = ""
-		@objc dynamic var medium: String = ""
-		@objc dynamic var fullSize: String = ""
-		@objc dynamic var mediumLossy: String = ""
-		
-		var thumbnailImage = MutableProperty<UIImage?>(nil)
-		var mediumImage = MutableProperty<UIImage?>(nil)
-		var fullSizelImage = MutableProperty<UIImage?>(nil)
-		var mediumLossyImage = MutableProperty<UIImage?>(nil)
-		
-		convenience init(thumbnail: String,
-						 medium: String,
-						 fullSize: String,
-						 mediumLossy: String) {
-			self.init()
-			
-			self.thumbnail = thumbnail
-			self.medium = medium
-			self.fullSize = fullSize
-			self.mediumLossy = mediumLossy
-		}
-	}
-	
 	static func from(_ json: JSON) -> MDPersonalPromotion {
 		return MDPersonalPromotion(promoId: json["id"].intValue,
 								   title: json["title"].stringValue,
+								   subtitle: json["subtitle"].stringValue,
 								   promoDescription: json["description"].stringValue,
 								   discount: json["discount"].stringValue,
 								   image: MDPromoImage.from(json["image"]),
@@ -57,8 +25,12 @@ class MDPersonalPromotion: Object {
 								   validityEndDate: json["validityEndDate"].stringValue,
 								   barcodeType: json["barcodeType"].stringValue,
 								   barcode: json["barcode"].stringValue,
-								   showExpirationTimer: json["showExpirationTime"].boolValue,
+								   showExpirationTimer: json["showExpirationTimer"].boolValue,
 								   offerType: json["offerType"].stringValue)
+	}
+	
+	override static func primaryKey() -> String? {
+		return "promoId"
 	}
 	
 	private let dateFormatter: DateFormatter = {
@@ -71,6 +43,7 @@ class MDPersonalPromotion: Object {
 	
 	@objc dynamic var promoId: Int = 0
 	@objc dynamic var title: String = ""
+	@objc dynamic var subtitle: String = ""
 	@objc dynamic var promoDescription: String = ""
 	@objc dynamic var discount: String = ""
 	@objc dynamic var image: MDPromoImage? = nil
@@ -91,6 +64,7 @@ class MDPersonalPromotion: Object {
 	
 	convenience init(promoId: Int,
 					 title: String,
+					 subtitle: String,
 					 promoDescription: String,
 					 discount: String,
 					 image: MDPromoImage?,
@@ -104,6 +78,7 @@ class MDPersonalPromotion: Object {
 		
 		self.promoId = promoId
 		self.title = title
+		self.subtitle = subtitle
 		self.promoDescription = promoDescription
 		self.discount = discount
 		self.image = image
@@ -114,8 +89,34 @@ class MDPersonalPromotion: Object {
 		self.showExpirationTimer = showExpirationTimer
 		self.offerType = offerType
 	}
+}
+
+class MDPromoImage: Object {
+	
+	static func from(_ json: JSON) -> MDPromoImage {
+		return MDPromoImage(thumbnail: json["thumbnail"].stringValue,
+							medium: json["medium"].stringValue,
+							fullSize: json["fullSize"].stringValue,
+							mediumLossy: json["mediumLossy"].stringValue)
+	}
 	
 	
+	@objc dynamic var thumbnail: String = ""
+	@objc dynamic var medium: String = ""
+	@objc dynamic var fullSize: String = ""
+	@objc dynamic var mediumLossy: String = ""
+	
+	convenience init(thumbnail: String,
+					 medium: String,
+					 fullSize: String,
+					 mediumLossy: String) {
+		self.init()
+		
+		self.thumbnail = thumbnail
+		self.medium = medium
+		self.fullSize = fullSize
+		self.mediumLossy = mediumLossy
+	}
 }
 
 

@@ -1,0 +1,42 @@
+{
+		"personalPromotions": [
+		{
+			"id": 1,
+			"title": "Самое Первое промо",
+			"subtitle": "Самое первое",
+			"description": "Товары, участвующие в акции:<br>Сыр BONVIDA Тильзитер нар. (Россия) 600г<br>Сыр BONVIDA Гауда нар. (Россия) 600г",
+			"discount": "-30%",
+			"image": {
+				"thumbnail": "https://fakeimg.pl/50x50/",
+				"medium": "https://fakeimg.pl/250x250/",
+				"fullSize": "https://fakeimg.pl/500x500/",
+				"mediumLossy": "https://fakeimg.pl/250x250/"
+			},
+			"validityStartDate": "2020-02-11T20:59:59Z",
+			"validityEndDate": "2020-02-14T12:59:59Z",
+			"barcodeType": "code128",
+			"barcode": "260344261008208039880",
+			"showExpirationTimer": true,
+			"offerType": "Kidsclub"
+		},
+		{
+			"id": 2,
+			"title": "Второе промо",
+			"subtitle": "Это уже второе",
+			"description": "<p>Lorem ipsum quisque diam fusce cursus diam, ipsum a mattis metus curabitur tellus pharetra. Porttitor: eros sodales odio massa mauris lorem sagittis risus leo pellentesque mattis massa pellentesque adipiscing non nibh adipiscing sagittis cursus. In ut tellus nam tellus <a href=''>sapien rutrum risus: lectus quisque morbi non</a> at ipsum at nulla porttitor nec ligula lorem. At, duis nibh arcu massa tempus donec at rutrum ut nulla eu commodo sodales. Et porta curabitur sodales, justo amet <b>adipiscing bibendum sapien</b> nibh, ipsum vulputate: congue.</p><p>Adipiscing risus congue risus sagittis <b>eu quam</b> nam massa vivamus, pellentesque non gravida non sagittis, massa ut, odio ligula sodales at porttitor sem lorem. Malesuada auctor gravida metus commodo at donec non eros vitae. Quam <i>maecenas, leo</i> morbi lorem orci sapien nec eu nibh lorem elementum enim bibendum. Non massa ultricies ipsum mauris ligula sit vivamus magna, eros porta molestie sagittis tellus eget tempus: integer ligula massa eu malesuada pharetra, at. Sodales nec molestie proin mauris lorem, morbi non massa urna auctor tempus gravida tempus molestie integer enim risus nibh bibendum. Cursus magna porttitor risus porttitor tellus ultricies sit quisque pharetra adipiscing integer proin amet metus quam mattis auctor leo sem.</p><p>Maecenas massa, magna vivamus eget, arcu fusce magna, vitae pharetra porttitor pellentesque, at. Sapien eu porttitor integer eget lectus adipiscing, non eget, leo enim, integer. At lectus, <b>integer amet, porta, maecenas sed pellentesque vitae tempus congue duis ligula.</b> Sit odio justo odio commodo curabitur sodales in sed morbi quam leo nam sem tempus rutrum. Nibh arcu eget <i>metus commodo</i> bibendum, cursus mauris, diam auctor sagittis elementum risus cursus auctor eros orci in.</p><p>Donec morbi nam molestie urna curabitur: nibh&nbsp;&mdash; orci et duis, ultricies metus mauris pharetra maecenas morbi eget eros pharetra integer in amet. Metus diam metus rutrum adipiscing lectus morbi odio sem non integer porta ut, massa morbi. Ut rutrum ligula porttitor justo eros adipiscing rutrum vivamus arcu eget gravida porttitor fusce, justo porttitor adipiscing urna quisque quam tellus non. Malesuada ut diam maecenas: a ornare odio orci eros proin sem lorem maecenas proin fusce leo. Porttitor congue nam integer vulputate <i>tempus tellus</i> molestie nulla urna magna sem, at massa auctor porta vitae magna, mauris et risus ligula magna nibh ultricies. Bibendum, orci at proin eu sem vitae ornare bibendum tellus curabitur commodo sem rutrum nibh curabitur commodo cursus auctor ligula in congue. Sapien morbi leo, urna duis ut&nbsp;&mdash; auctor maecenas metus tempus molestie vivamus bibendum <a href=''>molestie, rutrum integer at lorem arcu.</a></p><p>Quam ipsum mattis cursus nibh ornare integer tellus gravida congue. Molestie vulputate fusce malesuada a at enim adipiscing leo curabitur&nbsp;&mdash; metus risus donec ornare at ut sodales <a href=''>arcu nibh</a>, ut vivamus, eros. Massa quam vitae risus tempus, sed lectus urna ultricies, quam commodo gravida. Nec amet lorem arcu nibh malesuada <i>tempus enim et at</i> risus urna ornare, commodo non sit. Auctor massa nam, mauris curabitur quam, curabitur fusce ipsum odio vulputate ultricies bibendum quisque mattis, justo magna.</p><p>Nulla ut eros, non sodales vivamus auctor ultricies <i>bibendum orci maecenas morbi ultricies porta</i>, nec, lorem vulputate in odio urna ligula eu porta. Cursus, ornare eros bibendum, tempus cursus a nulla metus et curabitur sagittis, ligula odio, ipsum. <b>Sem gravida risus nec sapien sed porta</b> commodo sodales donec <b>morbi amet</b>&nbsp;&mdash; nulla eget. Pharetra magna tellus orci ipsum urna at nec, massa mattis, elementum diam maecenas enim ultricies. Mattis sodales rutrum porta sem odio massa quisque ligula <a href=''>sed malesuada eget lorem justo ornare</a> <a href=''>eget sapien ornare mauris nibh auctor</a> diam. Nulla tempus fusce eros ornare&nbsp;&mdash; arcu orci, porttitor proin malesuada fusce maecenas malesuada <a href=''>eu mattis</a> congue quam&nbsp;&mdash; cursus nulla ultricies. Commodo nec odio molestie: <i>morbi curabitur, quisque</i> adipiscing nulla morbi vivamus nec.</p><p>Ut integer urna donec, lorem maecenas eu <b>sagittis nibh porttitor, sed</b> auctor rutrum eget mauris gravida. Rutrum lectus ornare congue odio, metus lorem et auctor eros sapien donec quisque diam odio molestie nam. Urna risus mauris rutrum congue justo risus justo mauris <i>commodo nulla ornare</i> quam metus bibendum gravida. Pharetra, nibh ipsum gravida porta <b>ultricies tellus congue</b> lorem magna sed adipiscing proin mauris auctor tempus malesuada justo, pharetra. Ligula magna molestie leo: sodales ipsum, nulla metus quam quisque malesuada rutrum tempus mauris&nbsp;&mdash; <i>justo metus ligula, arcu</i> auctor sed. Sed ultricies malesuada tellus proin massa quam rutrum sagittis quam nulla. Eu sem nam metus in tempus urna, sem amet risus, mauris. Metus leo curabitur, vivamus nibh duis tellus <a href=''>sagittis eu bibendum a commodo pharetra</a>, arcu mattis lectus urna vitae, urna nibh, vulputate.</p><p>Ipsum molestie, curabitur quam auctor: arcu, odio bibendum: <a href=''>adipiscing, enim</a> sit&nbsp;&mdash; ultricies porttitor gravida massa nulla at fusce <b>a bibendum vulputate integer.</b> Mattis urna non <b>malesuada, maecenas eros duis fusce</b> nec leo. Tellus congue, metus proin eros ultricies a vitae sagittis, vivamus porta vitae, elementum arcu enim, et ut ipsum urna vitae metus urna, at ipsum. Sem porttitor ipsum justo <i>lorem non&nbsp;&mdash; sed eget enim vivamus sagittis: enim</i> risus leo pharetra ut magna fusce eu ipsum quisque sed. Nibh tellus, sagittis lorem massa, urna rutrum, commodo: fusce et integer ornare <b>vivamus bibendum.</b> Nulla ligula sit at leo justo sapien urna nam massa non arcu, cursus donec in, <i>bibendum sapien</i> arcu mauris sit.</p><p>Vitae ornare: ultricies sapien pharetra rutrum quisque: ligula molestie ultricies sed nec. Maecenas orci amet arcu mattis, morbi massa a sit mauris curabitur <a href=''>mauris sagittis diam metus at molestie ligula orci donec ligula gravida</a> ut. Quisque fusce ultricies sodales ligula enim <b>molestie porttitor sapien urna</b> lorem commodo ut, amet eget vitae&nbsp;&mdash; morbi diam sem rutrum metus. Enim sit sapien ultricies eu ornare morbi sit duis rutrum. Auctor mattis mauris nec, mattis sit porta vitae <a href=''>vulputate enim lectus in.</a> Sapien, nam arcu nec ornare justo massa odio porta integer bibendum at porta, bibendum in integer mattis, pharetra curabitur vulputate. Porta, tellus at fusce mattis congue rutrum eu curabitur, donec sagittis donec risus adipiscing: eget.</p><p>Elementum odio nulla sem a porttitor ligula risus, auctor, at malesuada lectus commodo risus elementum. Integer lectus, auctor molestie porta sed et <b>enim ultricies ligula</b> diam ornare quisque sem non. Non fusce integer, at curabitur sit diam ipsum ornare duis, sed, arcu odio, <b>lectus tempus.</b></p>",
+			"discount": "-99%",
+			"image": {
+				"thumbnail": "https://fakeimg.pl/50x50/",
+				"medium": "https://fakeimg.pl/250x250/",
+				"fullSize": "https://fakeimg.pl/500x500/",
+				"mediumLossy": "https://fakeimg.pl/250x250/"
+			},
+			"validityStartDate": "2020-03-11T20:59:59Z",
+			"validityEndDate": "2020-04-20T20:59:59Z",
+			"barcodeType": "code128",
+			"barcode": "8800555353555467203947453",
+			"showExpirationTimer": true,
+			"offerType": "Adultsclub"
+		}
+	]
+}
