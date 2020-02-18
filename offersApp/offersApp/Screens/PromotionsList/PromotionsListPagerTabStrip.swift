@@ -79,6 +79,6 @@ class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
 	}
 	
 	override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-		return [activePromotionsList, inactivePromotionsList]
+		return [inactivePromotionsList, activePromotionsList]
 	}
 }

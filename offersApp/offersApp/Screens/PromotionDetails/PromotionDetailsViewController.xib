@@ -35,22 +35,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="295.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gse-83-PHv">
-                            <rect key="frame" x="40" y="234" width="334" height="20.5"/>
+                            <rect key="frame" x="186" y="230.5" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mVj-cD-sfe">
-                            <rect key="frame" x="186" y="266.5" width="42" height="20.5"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJJ-KH-vO4" customClass="BadgeView" customModule="offersApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJJ-KH-vO4" customClass="BadgeView" customModule="offersApp" customModuleProvider="target">
+                            <rect key="frame" x="186" y="263" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-yb-1FR" customClass="DiscountRibbon" customModule="offersApp" customModuleProvider="target">
                             <rect key="frame" x="264" y="145.5" width="200" height="200"/>
                             <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,19 +65,18 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="gse-83-PHv" secondAttribute="trailing" constant="40" id="1Qi-YV-3lq"/>
+                        <constraint firstItem="gse-83-PHv" firstAttribute="centerX" secondItem="k1D-J4-0j3" secondAttribute="centerX" priority="999" id="325-kw-8id"/>
+                        <constraint firstItem="gse-83-PHv" firstAttribute="bottom" secondItem="hJJ-KH-vO4" secondAttribute="top" constant="-12" id="81p-gn-n6U"/>
                         <constraint firstItem="72A-iB-aqs" firstAttribute="centerY" secondItem="k1D-J4-0j3" secondAttribute="centerY" id="9zw-oB-jwG"/>
-                        <constraint firstItem="gse-83-PHv" firstAttribute="leading" secondItem="k1D-J4-0j3" secondAttribute="leading" constant="40" id="BAb-fC-R7M"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mVj-cD-sfe" secondAttribute="trailing" id="ITz-hC-f44"/>
+                        <constraint firstItem="gse-83-PHv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k1D-J4-0j3" secondAttribute="leading" constant="40" id="BAb-fC-R7M"/>
+                        <constraint firstItem="gse-83-PHv" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0vm-yb-1FR" secondAttribute="leading" constant="80" id="CVS-ak-wre"/>
                         <constraint firstAttribute="trailing" secondItem="0vm-yb-1FR" secondAttribute="trailing" constant="-50" id="Jef-Nr-WPM"/>
-                        <constraint firstItem="gse-83-PHv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="k1D-J4-0j3" secondAttribute="top" constant="50" id="UMX-Hh-yv4"/>
-                        <constraint firstItem="mVj-cD-sfe" firstAttribute="centerX" secondItem="k1D-J4-0j3" secondAttribute="centerX" id="VbS-aw-3ac"/>
-                        <constraint firstAttribute="bottom" secondItem="mVj-cD-sfe" secondAttribute="bottom" constant="8.5" id="Wu3-HB-9Tg"/>
+                        <constraint firstItem="gse-83-PHv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="k1D-J4-0j3" secondAttribute="top" id="UMX-Hh-yv4"/>
                         <constraint firstItem="72A-iB-aqs" firstAttribute="centerX" secondItem="k1D-J4-0j3" secondAttribute="centerX" id="ZAr-xr-KlG"/>
-                        <constraint firstItem="mVj-cD-sfe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k1D-J4-0j3" secondAttribute="leading" id="gkz-ch-pMP"/>
-                        <constraint firstItem="mVj-cD-sfe" firstAttribute="top" secondItem="gse-83-PHv" secondAttribute="bottom" constant="12" id="jZL-33-RaX"/>
                         <constraint firstAttribute="bottom" secondItem="0vm-yb-1FR" secondAttribute="bottom" constant="-50" id="lbA-9D-aPG"/>
                         <constraint firstAttribute="height" constant="295.5" id="o5m-GP-PO9"/>
+                        <constraint firstAttribute="bottom" secondItem="hJJ-KH-vO4" secondAttribute="bottom" constant="12" id="vDf-U0-5wR"/>
+                        <constraint firstItem="hJJ-KH-vO4" firstAttribute="centerX" secondItem="k1D-J4-0j3" secondAttribute="centerX" id="x51-Dh-Nox"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADO-2Q-HWQ">

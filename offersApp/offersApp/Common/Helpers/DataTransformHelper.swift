@@ -19,11 +19,12 @@ class DataTransformHelper {
 	static func generateBarcode(from contentString: String, type: String) -> UIImage? {
 		switch (type) {
 		case "code128":
-			return RSCode128Generator(codeTable: .auto).generateCode(contentString, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code128.rawValue)
+			return RSUnifiedCodeGenerator.shared.generateCode(contentString, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code128.rawValue)
+
 		case "code39":
 			return RSCode39Generator.generateCode(contentString, filterName: RSAbstractCodeGenerator.filterName(AVMetadataObject.ObjectType.code39.rawValue))
 		default:
-			return nil
+			return RSUnifiedCodeGenerator.shared.generateCode(contentString, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
 		}
 	}
 	
