@@ -38,12 +38,12 @@ class PromotionsListTableViewCell: SwipeTableViewCell {
 	var isMultiselected = false
 	
 	
-	@IBOutlet weak var thumbnailImageView: UIImageView!
-	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var endDateLabel: UILabel!
-	@IBOutlet weak var discountBadgeView: BadgeView!
-	@IBOutlet weak var offerTypeBadgeView: BadgeView!
-	@IBOutlet weak var delimeter: UIView!
+	@IBOutlet private weak var thumbnailImageView: UIImageView!
+	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet private weak var endDateLabel: UILabel!
+	@IBOutlet private weak var discountBadgeView: BadgeView!
+	@IBOutlet private weak var offerTypeBadgeView: BadgeView!
+	@IBOutlet private weak var delimeter: UIView!
 	
 	
     override func awakeFromNib() {

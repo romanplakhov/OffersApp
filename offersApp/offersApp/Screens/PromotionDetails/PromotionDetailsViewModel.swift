@@ -12,13 +12,14 @@ import Result
 
 class PromotionDetailsViewModel {
 	
+	//MARK: Public members
 	var promotionActivated: Bool {
 		didSet {
 			promotionActivationChangedSignalObserver.send(value: ())
 		}
 	}
 	
-	public func switchActivationStatus() {
+	func switchActivationStatus() {
 		if promotionActivated {
 			activePromotionsManager.deactivatePromotion(promotionId: promotion.promoId)
 		} else {
@@ -28,6 +29,7 @@ class PromotionDetailsViewModel {
 		promotionActivated = !promotionActivated
 	}
 	
+	//MARK: Binding sources
 	var promotionActivationChangedSignal: Signal<(), NoError>
 	private var promotionActivationChangedSignalObserver: Signal<(), NoError>.Observer
 	
@@ -36,6 +38,7 @@ class PromotionDetailsViewModel {
 	var offerType = MutableProperty<String>("")
 	var image = MutableProperty<String>("")
 	
+	//MARK: Private properties
 	private var promotion: MDPersonalPromotion
 	private var activePromotionsManager: ActivePromotionsManager
 	

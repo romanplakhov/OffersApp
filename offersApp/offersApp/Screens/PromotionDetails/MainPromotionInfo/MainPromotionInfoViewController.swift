@@ -12,15 +12,18 @@ import ReactiveCocoa
 
 class MainPromotionInfoViewController: UIViewController {
 	
+	//MARK: Public properties
 	var viewModel: MainPromotionInfoViewModel!
 	
-	@IBOutlet weak var remainingLabel: UILabel!
-	@IBOutlet weak var datesLabel: UILabel!
-	@IBOutlet weak var subtitleLabel: UILabel!
-	@IBOutlet weak var barcodeImageView: UIImageView!
+	//MARK: Private properties
+	@IBOutlet private weak var remainingLabel: UILabel!
+	@IBOutlet private weak var datesLabel: UILabel!
+	@IBOutlet private weak var subtitleLabel: UILabel!
+	@IBOutlet private weak var barcodeImageView: UIImageView!
 	
-	@IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet private weak var scrollView: UIScrollView!
 	
+	//MARK: Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,16 +31,18 @@ class MainPromotionInfoViewController: UIViewController {
 		bind()
     }
 	
+	//MARK: Setup
 	private func setup() {
 		remainingLabel.textColor = Config.Colors.destructiveColor
 		datesLabel.textColor = Config.Colors.paleTextColor
 		subtitleLabel.textColor = Config.Colors.primaryTextColor
 		
-		remainingLabel.font = Config.boldFont
-		datesLabel.font = Config.smallTextFont
-		subtitleLabel.font = Config.regularTextFont
+		remainingLabel.font = Config.Fonts.boldFont
+		datesLabel.font = Config.Fonts.smallTextFont
+		subtitleLabel.font = Config.Fonts.regularTextFont
 	}
 	
+	//MARK: Binding
 	private func bind() {
 		remainingLabel.reactive.isHidden <~ viewModel.remainingTimerAvailable.map {!$0}
 		remainingLabel.reactive.text <~ viewModel.remainingTime
@@ -48,6 +53,7 @@ class MainPromotionInfoViewController: UIViewController {
 
 }
 
+//MARK: IndicatorInfoProvider
 extension MainPromotionInfoViewController: IndicatorInfoProvider {
 	func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 		return IndicatorInfo(title: "Акция")

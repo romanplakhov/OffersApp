@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+//Type erasure was used
 class Repository<EntityType: Object>: DatabaseInstance {
 	func update(item: EntityType) {
 		return _box.update(item: item)

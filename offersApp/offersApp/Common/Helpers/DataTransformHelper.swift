@@ -103,7 +103,8 @@ class DataTransformHelper {
 			unit = .day
 		}
 		
-		let units = calendar.component(unit, from: date) - calendar.component(unit, from: Date())
+		let components = calendar.dateComponents([unit], from: Date(), to: date)
+		let units = unit == .day ? components.day! : components.hour!
 		
 		switch units % 10 {
 		case 1 where units % 100 != 11:

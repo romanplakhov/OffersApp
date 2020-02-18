@@ -10,16 +10,18 @@ import Foundation
 import UIKit
 
 class Config {
-	static let mainFont = UIFont(name: "Montserrat-Medium", size: 14.0)!
-	static let headersFont = UIFont(name: "Montserrat-Medium", size: 20.0)!
-	static let boldFont = UIFont(name: "Montserrat-Bold", size: 16.0)!
-	static let detailsTitleFont = UIFont(name: "Montserrat-Regular", size: 30.0)!
-	static let boldTextFont = UIFont(name: "Montserrat-Bold", size: 24.0)!
-	static let smallTextFont = UIFont(name: "Montserrat-Regular", size: 14.0)!
-	static let regularTextFont = UIFont(name: "Montserrat-Regular", size: 18.0)!
-	static let actionButtonFont = UIFont(name: "Montserrat-Bold", size: 14.0)
-	static let discountRibbonFont = UIFont(name: "Montserrat-Bold", size: 24.0)
-	static let offerTypeBadgeFont = UIFont(name: "Montserrat-Bold", size: 10.0)!
+	class Fonts {
+		static let mainFont = UIFont(name: "Montserrat-Medium", size: 14.0)!
+		static let headersFont = UIFont(name: "Montserrat-Medium", size: 20.0)!
+		static let boldFont = UIFont(name: "Montserrat-Bold", size: 16.0)!
+		static let detailsTitleFont = UIFont(name: "Montserrat-Regular", size: 30.0)!
+		static let boldTextFont = UIFont(name: "Montserrat-Bold", size: 24.0)!
+		static let smallTextFont = UIFont(name: "Montserrat-Regular", size: 14.0)!
+		static let regularTextFont = UIFont(name: "Montserrat-Regular", size: 18.0)!
+		static let actionButtonFont = UIFont(name: "Montserrat-Bold", size: 14.0)
+		static let discountRibbonFont = UIFont(name: "Montserrat-Bold", size: 24.0)
+		static let offerTypeBadgeFont = UIFont(name: "Montserrat-Bold", size: 10.0)!
+	}
 	
 	class Colors {
 		static let primaryBackgroundColor = UIColor(hex: "#FFFFFF")

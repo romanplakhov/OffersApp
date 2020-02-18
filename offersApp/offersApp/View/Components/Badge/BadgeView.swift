@@ -38,11 +38,11 @@ enum BadgeViewType {
 	var font: UIFont {
 		switch self {
 		case .discount:
-			return Config.boldFont
+			return Config.Fonts.boldFont
 		case .offerTypeIcon:
-			return Config.offerTypeBadgeFont
+			return Config.Fonts.offerTypeBadgeFont
 		case .offerTypeDetails:
-			return Config.offerTypeBadgeFont
+			return Config.Fonts.offerTypeBadgeFont
 		}
 	}
 }
@@ -107,7 +107,7 @@ class BadgeView: UILabel {
 		baselineAdjustment = .alignCenters
 		
 		self.textColor = Config.Colors.alternativeTextColor
-		self.font = Config.boldFont
+		self.font = Config.Fonts.boldFont
 		
 	}
 }

@@ -12,22 +12,25 @@ import ReactiveSwift
 import NVActivityIndicatorView
 
 class PromotionsListViewController: UIViewController {
-
-	@IBOutlet weak var tableView: UITableView!
-	@IBOutlet weak var leftActionButton: ActionButton!
-	@IBOutlet weak var rightActionButton: ActionButton!
-	@IBOutlet weak var emptyTitle: UILabel!
-	@IBOutlet weak var emptyDescription: UILabel!
-	@IBOutlet weak var emptyView: UIView!
-	@IBOutlet weak var activityIndicator: NVActivityIndicatorView!
 	
-	@IBOutlet weak var actionButtonsStackViewBottomConstraint: NSLayoutConstraint!
-	
+	//MARK: Public properties
 	var viewModel: PromotionsListViewModel!
+
+	//MARK: Private properties
+	@IBOutlet private weak var tableView: UITableView!
+	@IBOutlet private weak var leftActionButton: ActionButton!
+	@IBOutlet private weak var rightActionButton: ActionButton!
+	@IBOutlet private weak var emptyTitle: UILabel!
+	@IBOutlet private weak var emptyDescription: UILabel!
+	@IBOutlet private weak var emptyView: UIView!
+	@IBOutlet private weak var activityIndicator: NVActivityIndicatorView!
+	
+	@IBOutlet private weak var actionButtonsStackViewBottomConstraint: NSLayoutConstraint!
 	
 	private var hiddenActionButtonsBottomConstraintConstant: CGFloat = -100
 	private var shownActionButtonsBottomConstraintConstant: CGFloat = 42
 	
+	//MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +46,7 @@ class PromotionsListViewController: UIViewController {
 		
 	}
 
+	//MARK: Setup
 	private func setup() {
 		setupTableView()
 		setupActionButtons()
@@ -98,13 +102,14 @@ class PromotionsListViewController: UIViewController {
 	}
 	
 	private func setupEmptyView() {
-		emptyTitle.font = Config.regularTextFont
-		emptyDescription.font = Config.smallTextFont
+		emptyTitle.font = Config.Fonts.regularTextFont
+		emptyDescription.font = Config.Fonts.smallTextFont
 		
 		emptyDescription.textColor = Config.Colors.paleTextColor
 		emptyTitle.textColor = Config.Colors.paleTextColor
 	}
 	
+	//MARK: Binding
 	private func bind() {
 		viewModel.reloadSignal.producer.observe(on: UIScheduler()).on {[weak self] in
 			self?.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
@@ -129,6 +134,7 @@ class PromotionsListViewController: UIViewController {
 		emptyView.reactive.isHidden <~ viewModel.isEmpty.map {!$0}
 	}
 	
+	//MARK: Gesture handlers
 	@objc func handleLongPress(longPressGesture: UILongPressGestureRecognizer) {
 		guard !viewModel.editingMode.value else {return}
 		setEditingMode(true)
@@ -155,6 +161,7 @@ class PromotionsListViewController: UIViewController {
 		}
 	}
 	
+	//MARK: Other
 	private func setEditingMode(_ value: Bool, animated: Bool = true) {
 		viewModel.setEditingMode(value)
 		
@@ -180,6 +187,7 @@ class PromotionsListViewController: UIViewController {
 	}
 }
 
+//MARK: UITableViewDelegate, UITableViewDataSource
 extension PromotionsListViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.numberOfRowsForSection(section)
@@ -213,12 +221,14 @@ extension PromotionsListViewController: UITableViewDelegate, UITableViewDataSour
 	}
 }
 
+//MARK: IndicatorInfoProvider
 extension PromotionsListViewController: IndicatorInfoProvider {
 	func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 		return IndicatorInfo(title: viewModel.type.title)
 	}
 }
 
+//MARK: SwipeTableViewCellDelegate
 extension PromotionsListViewController: SwipeTableViewCellDelegate {
 	func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
 
@@ -228,7 +238,7 @@ extension PromotionsListViewController: SwipeTableViewCellDelegate {
 			}
 
 			activateAction.backgroundColor = Config.Colors.constructiveColor
-			activateAction.font = Config.boldFont
+			activateAction.font = Config.Fonts.boldFont
 			return [activateAction]
 		} else if orientation == .right && viewModel.type == .active {
 			let deactivateAction = SwipeAction(style: .default, title: "ДЕАКТИВИРОВАТЬ") { [weak self]_, indexPath in
@@ -236,7 +246,7 @@ extension PromotionsListViewController: SwipeTableViewCellDelegate {
 			}
 
 			deactivateAction.backgroundColor = Config.Colors.destructiveColor
-			deactivateAction.font = Config.boldFont
+			deactivateAction.font = Config.Fonts.boldFont
 			return [deactivateAction]
 		}
 

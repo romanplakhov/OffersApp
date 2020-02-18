@@ -12,22 +12,20 @@ import ReactiveCocoa
 
 class PromotionDescriptionViewController: UIViewController {
 
+	//MARK: Public properties
 	var viewModel: PromotionDescriptionViewModel!
 	var scrollingDelegate: UITextViewDelegate!
-	@IBOutlet weak var descriptionContentView: UITextView!
 	
+	//MARK: Private properties
+	@IBOutlet private weak var descriptionContentView: UITextView!
+	
+	//MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 		descriptionContentView.delegate = scrollingDelegate
 		
 		bind()
-
-		
     }
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
@@ -35,14 +33,13 @@ class PromotionDescriptionViewController: UIViewController {
 		descriptionContentView.setContentOffset(CGPoint(x: 0,y: 0), animated: false)
 	}
 	
+	//MARK: Binding
 	private func bind() {
 		descriptionContentView.reactive.attributedText <~ viewModel.attributedDescription
 	}
-
-
 }
 
-
+//MARK: IndicatorInfoProvider
 extension PromotionDescriptionViewController: IndicatorInfoProvider {
 	func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 		return IndicatorInfo(title: "Ассортимент")

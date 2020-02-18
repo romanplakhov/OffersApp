@@ -10,13 +10,12 @@ import UIKit
 
 class PromotionDetailsPagerTabStrip: ButtonBarPagerTabStripViewController {
 	
+	//MARK: Private properties
 	private var mainPromotionInfoViewController: MainPromotionInfoViewController
 	private var promotionDescriptionViewController: PromotionDescriptionViewController
 	
-	
-	
+	//MARK: Lifecycle
 	init(mainPromotionInfoViewController: MainPromotionInfoViewController, promotionDescriptionViewController: PromotionDescriptionViewController) {
-		
 		self.mainPromotionInfoViewController = mainPromotionInfoViewController
 		self.promotionDescriptionViewController = promotionDescriptionViewController
 		
@@ -37,10 +36,11 @@ class PromotionDetailsPagerTabStrip: ButtonBarPagerTabStripViewController {
 		super.viewDidLayoutSubviews()
 	}
 	
+	//MARK: Setup
 	private func setupStyle() {
 		self.settings.style.selectedBarBackgroundColor = Config.Colors.primaryTintColor
 		self.settings.style.buttonBarBackgroundColor = Config.Colors.primaryBackgroundColor
-		self.settings.style.buttonBarItemFont = Config.mainFont
+		self.settings.style.buttonBarItemFont = Config.Fonts.mainFont
 		self.settings.style.buttonBarItemTitleColor = Config.Colors.secondaryTextColor
 		self.settings.style.buttonBarSelectedItemTitleColor = Config.Colors.primaryTextColor
 		self.settings.style.buttonBarItemBackgroundColor = Config.Colors.primaryBackgroundColor

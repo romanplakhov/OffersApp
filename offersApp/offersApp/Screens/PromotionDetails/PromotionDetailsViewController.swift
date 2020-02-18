@@ -10,31 +10,34 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 import Kingfisher
+import NVActivityIndicatorView
 
 class PromotionDetailsViewController: UIViewController {
 
+	//MARK: Public properties
 	var viewModel: PromotionDetailsViewModel!
-	
 	var promotionDetailsPagerTabStrip: PromotionDetailsPagerTabStrip!
 	
+	//MARK: Private properties
 	private var minCarouselHeight: CGFloat!
 	private var maxCarouselHeight: CGFloat!
 	
-	@IBOutlet weak var carouselView: UIImageView!
-	@IBOutlet weak var containerView: UIView!
-	@IBOutlet weak var actionView: UIView!
+	@IBOutlet private weak var carouselView: UIImageView!
+	@IBOutlet private weak var containerView: UIView!
+	@IBOutlet private weak var actionView: UIView!
 	
-	@IBOutlet weak var actionButton: ActionButton!
-	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var offertTypeBadge: BadgeView!
-	@IBOutlet weak var discountRibbon: DiscountRibbon!
+	@IBOutlet private weak var actionButton: ActionButton!
+	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet private weak var offertTypeBadge: BadgeView!
+	@IBOutlet private weak var discountRibbon: DiscountRibbon!
+	@IBOutlet private weak var activityIndicator: NVActivityIndicatorView!
 	
-	@IBOutlet weak var carouselHeightConstraint: NSLayoutConstraint!
+	@IBOutlet private weak var carouselHeightConstraint: NSLayoutConstraint!
 	
 	private var previousScrollOffset: CGFloat = 0
 	private var panPreviousLocationY: CGFloat = 0
 
-	
+	//MARK: Lyfecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +55,7 @@ class PromotionDetailsViewController: UIViewController {
 		setupNavigationBar()
 	}
 	
+	//MARK: Setup
 	private func setup() {
 		self.addChild(promotionDetailsPagerTabStrip)
 		self.containerView.addSubview(promotionDetailsPagerTabStrip.view)
@@ -65,7 +69,10 @@ class PromotionDetailsViewController: UIViewController {
 		discountRibbon.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/4))
 		offertTypeBadge.type = .offerTypeDetails
 		
-		titleLabel.font = Config.detailsTitleFont
+		titleLabel.font = Config.Fonts.detailsTitleFont
+		
+		activityIndicator.color = Config.Colors.primaryTintColor
+		activityIndicator.type = .ballPulse
 	}
 	
 	
@@ -88,6 +95,7 @@ class PromotionDetailsViewController: UIViewController {
 		return .lightContent
 	}
 	
+	//MARK: Binding
 	private func bind() {
 		titleLabel.reactive.text <~ viewModel.title
 		offertTypeBadge.reactive.text <~ viewModel.offerType
@@ -96,7 +104,10 @@ class PromotionDetailsViewController: UIViewController {
 			guard let self = self,
 				let url = URL(string: urlString) else {return}
 			
-			self.carouselView.kf.setImage(with: url)
+			self.activityIndicator.startAnimating()
+			self.carouselView.kf.setImage(with: url) { [weak self]_ in
+				self?.activityIndicator.stopAnimating()
+			}
 		}.start()
 		
 		viewModel.promotionActivationChangedSignal.producer.observe(on: UIScheduler()).on { [weak self] in
@@ -105,6 +116,7 @@ class PromotionDetailsViewController: UIViewController {
 	}
 }
 
+//MARK: UITextViewDelegate
 extension PromotionDetailsViewController: UITextViewDelegate {
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let delta =  scrollView.contentOffset.y - previousScrollOffset

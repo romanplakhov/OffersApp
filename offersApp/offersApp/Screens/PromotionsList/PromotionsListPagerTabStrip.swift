@@ -9,11 +9,11 @@
 import UIKit
 
 class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
+	//MARK: Private properties
 	private var activePromotionsList: PromotionsListViewController
 	private var inactivePromotionsList: PromotionsListViewController
 	
-	
-	
+	//MARK: Lifecycle
 	init(activePromotionsList: PromotionsListViewController, inactivePromotionsList: PromotionsListViewController) {
 		self.activePromotionsList = activePromotionsList
 		self.inactivePromotionsList = inactivePromotionsList
@@ -42,6 +42,7 @@ class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
 		inactivePromotionsList.viewModel.updateData()
 	}
 	
+	//MARK: Setup
 	private func setupNavigationBar() {
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 		self.navigationController?.navigationBar.backgroundColor = .white
@@ -52,7 +53,7 @@ class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
 		let label = UILabel()
 		label.textColor = UIColor.black
 		label.text = "Предложения"
-		label.font = Config.headersFont
+		label.font = Config.Fonts.headersFont
 		label.sizeToFit()
 		
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
@@ -62,7 +63,7 @@ class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
 	private func setupStyle() {
 		self.settings.style.selectedBarBackgroundColor = Config.Colors.primaryTintColor
 		self.settings.style.buttonBarBackgroundColor = Config.Colors.primaryBackgroundColor
-		self.settings.style.buttonBarItemFont = Config.mainFont
+		self.settings.style.buttonBarItemFont = Config.Fonts.mainFont
 		self.settings.style.buttonBarItemTitleColor = Config.Colors.secondaryTextColor
 		self.settings.style.buttonBarSelectedItemTitleColor = Config.Colors.primaryTextColor
 		self.settings.style.buttonBarItemBackgroundColor = Config.Colors.primaryBackgroundColor

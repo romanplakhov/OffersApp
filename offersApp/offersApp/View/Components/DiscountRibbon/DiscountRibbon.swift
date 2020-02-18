@@ -17,8 +17,8 @@ extension Reactive where Base: DiscountRibbon {
 }
 
 class DiscountRibbon: UIView {
-	@IBOutlet var view: UIView!
-	@IBOutlet weak var discountLabel: UILabel!
+	@IBOutlet private var view: UIView!
+	@IBOutlet fileprivate weak var discountLabel: UILabel!
 	
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +37,7 @@ class DiscountRibbon: UIView {
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 		discountLabel.backgroundColor = Config.Colors.primaryTintColor
 		discountLabel.textColor = Config.Colors.alternativeTextColor
-		discountLabel.font = Config.discountRibbonFont
+		discountLabel.font = Config.Fonts.discountRibbonFont
 		discountLabel.adjustsFontSizeToFitWidth = true
 		self.backgroundColor = .clear
     }

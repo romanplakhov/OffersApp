@@ -52,7 +52,7 @@ class ActionButton: UIButton {
 	private func setup() {
 		self.setTitleColor(Config.Colors.alternativeTextColor, for: .normal)
 		self.layer.cornerRadius = self.bounds.height/2
-		self.titleLabel?.font = Config.actionButtonFont
+		self.titleLabel?.font = Config.Fonts.actionButtonFont
 		self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
 		self.addTarget(self, action: #selector(onButtonTapped), for: .touchUpInside)
 		

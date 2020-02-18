@@ -53,11 +53,10 @@ enum PromotionsListType{
 			}
 		}
 	}
-	
-	
 }
 
 class PromotionsListViewModel: RedirectSignalsProducer {
+	//MARK: Public members
 	func numberOfRowsForSection(_ section: Int) -> Int {
 		return promotions.count
 	}
@@ -123,6 +122,9 @@ class PromotionsListViewModel: RedirectSignalsProducer {
 		}
 	}
 	
+	var type: PromotionsListType
+	
+	//MARK: Binding sources
 	var emptyViewTitle = MutableProperty<String>("")
 	var emptyViewBody = MutableProperty<String>("")
 	
@@ -136,8 +138,7 @@ class PromotionsListViewModel: RedirectSignalsProducer {
 	var reloadSignal: Signal<Void, NoError>
     private var reloadSignalObserver: Signal<Void, NoError>.Observer
 	
-	var type: PromotionsListType
-	
+	//MARK: Private members
 	private var network: PromoDataProvider
 	private var repository: Repository<MDPersonalPromotion>
 	private var activePromotionsManager: ActivePromotionsManager
@@ -164,7 +165,6 @@ class PromotionsListViewModel: RedirectSignalsProducer {
 		emptyViewTitle.value = type.emptyTitle
 		emptyViewBody.value = type.emptyBody
 	}
-	
 	
 	private func loadData() {
 		isLoading.value = true
