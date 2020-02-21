@@ -36,6 +36,8 @@ class PromotionDetailsViewController: UIViewController {
 	
 	private var previousScrollOffset: CGFloat = 0
 	private var panPreviousLocationY: CGFloat = 0
+	
+	private var storedBrightness: CGFloat?
 
 	//MARK: Lyfecycle
 	override func viewDidLoad() {
@@ -53,6 +55,15 @@ class PromotionDetailsViewController: UIViewController {
 		super.viewWillAppear(animated)
 		
 		setupNavigationBar()
+		storedBrightness = UIScreen.main.brightness
+		UIScreen.main.setBrightness(to: storedBrightness! * 1.8, duration: 0.5)
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		if let brightness = storedBrightness {
+			UIScreen.main.setBrightness(to: brightness, duration: 0.5)
+		}
 	}
 	
 	//MARK: Setup
@@ -73,6 +84,8 @@ class PromotionDetailsViewController: UIViewController {
 		
 		activityIndicator.color = Config.Colors.primaryTintColor
 		activityIndicator.type = .ballPulse
+		
+		carouselView.clipsToBounds = true
 	}
 	
 	
@@ -106,6 +119,7 @@ class PromotionDetailsViewController: UIViewController {
 			
 			self.activityIndicator.startAnimating()
 			self.carouselView.kf.setImage(with: url) { [weak self]_ in
+				self?.carouselView.image = self?.carouselView.image?.darkened()
 				self?.activityIndicator.stopAnimating()
 			}
 		}.start()
@@ -137,5 +151,11 @@ extension PromotionDetailsViewController: UITextViewDelegate {
 		}
 
 		previousScrollOffset = scrollView.contentOffset.y
+	}
+}
+
+extension PromotionDetailsViewController: MainPromotionInfoViewControllerDelegate {
+	func resetIsNeeded() {
+		carouselHeightConstraint.constant = maxCarouselHeight
 	}
 }

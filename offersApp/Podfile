@@ -15,4 +15,5 @@ target 'offersApp' do
     pod 'ReachabilitySwift'
     pod 'SwipeCellKit'
     pod 'RSBarcodes_Swift'
+    pod 'M13Checkbox'
 end

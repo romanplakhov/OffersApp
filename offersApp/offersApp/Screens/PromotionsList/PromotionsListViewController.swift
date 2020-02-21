@@ -118,6 +118,11 @@ class PromotionsListViewController: UIViewController {
 		viewModel.editingMode.signal.producer.observe(on: UIScheduler()).on {[weak self]value in
 			guard let self = self else {return}
 			self.tableView.allowsMultipleSelection = value
+			for i in 0..<self.tableView.numberOfRows(inSection: 0) {
+				guard let cell = self.tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? PromotionsListTableViewCell else {return}
+				
+				cell.setMultiselectableMode(value)
+			}
 		}.start()
 		
 		viewModel.isLoading.signal.producer.observe(on: UIScheduler()).on {[weak self]isLoading in

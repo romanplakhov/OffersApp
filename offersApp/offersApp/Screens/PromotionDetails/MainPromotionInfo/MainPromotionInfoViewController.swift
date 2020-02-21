@@ -14,6 +14,7 @@ class MainPromotionInfoViewController: UIViewController {
 	
 	//MARK: Public properties
 	var viewModel: MainPromotionInfoViewModel!
+	weak var delegate: MainPromotionInfoViewControllerDelegate?
 	
 	//MARK: Private properties
 	@IBOutlet private weak var remainingLabel: UILabel!
@@ -30,6 +31,12 @@ class MainPromotionInfoViewController: UIViewController {
 		setup()
 		bind()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		delegate?.resetIsNeeded()
+	}
 	
 	//MARK: Setup
 	private func setup() {
@@ -58,4 +65,8 @@ extension MainPromotionInfoViewController: IndicatorInfoProvider {
 	func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 		return IndicatorInfo(title: "Акция")
 	}
+}
+
+protocol MainPromotionInfoViewControllerDelegate: class {
+	func resetIsNeeded()
 }

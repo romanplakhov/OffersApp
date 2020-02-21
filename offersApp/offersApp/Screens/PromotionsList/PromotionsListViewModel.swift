@@ -64,6 +64,7 @@ class PromotionsListViewModel: RedirectSignalsProducer {
 	func prepareCellForRowAt(cell: PromotionsListTableViewCell, indexPath: IndexPath) -> PromotionsListTableViewCell {
 		cell.configureCell(with: promotions[indexPath.row])
 		cell.setMultiselected(false)
+		cell.setMultiselectableMode(editingMode.value)
 		return cell
 	}
 	

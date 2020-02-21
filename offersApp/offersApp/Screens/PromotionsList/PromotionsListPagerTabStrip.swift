@@ -31,13 +31,14 @@ class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
 		super.viewDidLoad()
 
 		setupSubstrateView()
+		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
 		setupNavigationBar()
-
+		
 		activePromotionsList.viewModel.updateData()
 		inactivePromotionsList.viewModel.updateData()
 	}
@@ -45,7 +46,6 @@ class PromotionsListPagerTabStrip: ButtonBarPagerTabStripViewController {
 	//MARK: Setup
 	private func setupNavigationBar() {
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-		self.navigationController?.navigationBar.backgroundColor = .white
 		self.navigationController?.navigationBar.isTranslucent = false
 		self.navigationController?.navigationBar.backgroundColor = .clear
 		self.navigationController?.navigationBar.tintColor = .white

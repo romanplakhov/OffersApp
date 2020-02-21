@@ -68,6 +68,8 @@
 		7E85E0D023F427430018E5C9 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0CF23F4267B0018E5C9 /* Montserrat-Medium.ttf */; };
 		7E85E0D323F42E550018E5C9 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85E0D223F42E550018E5C9 /* BadgeView.swift */; };
 		7E85E0D623F434650018E5C9 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E85E0D123F42DED0018E5C9 /* Montserrat-Bold.ttf */; };
+		7EAEA6A823FFDAEA00891BCC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEA6A723FFDAEA00891BCC /* UIImage.swift */; };
+		7EAEA6AA23FFE1D900891BCC /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEA6A923FFE1D900891BCC /* UIScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,8 @@
 		7E85E0CF23F4267B0018E5C9 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		7E85E0D123F42DED0018E5C9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7E85E0D223F42E550018E5C9 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		7EAEA6A723FFDAEA00891BCC /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		7EAEA6A923FFE1D900891BCC /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		8E2C18672F6FF8EFE0959B92 /* Pods-offersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offersApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-offersApp/Pods-offersApp.release.xcconfig"; sourceTree = "<group>"; };
 		C472DD17AB57495A03186292 /* Pods_offersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_offersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -448,6 +452,8 @@
 			children = (
 				7E85E0CD23F424540018E5C9 /* UIColor.swift */,
 				7E1DAF0123F582710074041B /* String.swift */,
+				7EAEA6A723FFDAEA00891BCC /* UIImage.swift */,
+				7EAEA6A923FFE1D900891BCC /* UIScreen.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -592,8 +598,10 @@
 				7E85E04023F1BCAC0018E5C9 /* RedirectSignalsReceiver.swift in Sources */,
 				7E1DAF0223F582710074041B /* String.swift in Sources */,
 				7E1DAEF923F56AD80074041B /* MainPromotionInfoViewModel.swift in Sources */,
+				7EAEA6A823FFDAEA00891BCC /* UIImage.swift in Sources */,
 				7E85E04723F1BEE10018E5C9 /* DependencyContainer.swift in Sources */,
 				7E85E0C723F41EF20018E5C9 /* PagerTabStripError.swift in Sources */,
+				7EAEA6AA23FFE1D900891BCC /* UIScreen.swift in Sources */,
 				7E85E0C023F41EF20018E5C9 /* IndicatorInfo.swift in Sources */,
 				7E85E0CA23F41EF20018E5C9 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
 				7E85E0CE23F424540018E5C9 /* UIColor.swift in Sources */,

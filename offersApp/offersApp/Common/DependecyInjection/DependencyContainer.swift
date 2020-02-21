@@ -51,17 +51,20 @@ class DependencyContainer: ViewControllersProvider {
 																  activePromotionsManager: activePromotionsManager)
 		let promotionDetailsViewController = PromotionDetailsViewController()
 		promotionDetailsViewController.viewModel = promotionDetailsViewModel
-		let promotionDetailsPagerTabStrip =  makePromotionDetailsPagerTabStrip(promotion: promotion, scrollingDelegate: promotionDetailsViewController)
+		let promotionDetailsPagerTabStrip =  makePromotionDetailsPagerTabStrip(promotion: promotion,
+																			   scrollingDelegate: promotionDetailsViewController,
+																			   mainPromotionInfoViewControllerDelegate: promotionDetailsViewController)
 		promotionDetailsViewController.promotionDetailsPagerTabStrip = promotionDetailsPagerTabStrip
 
 		
 		return promotionDetailsViewController
 	}
 	
-	func makeMainPromotionInfoViewController(promotion: MDPersonalPromotion) -> MainPromotionInfoViewController {
+	func makeMainPromotionInfoViewController(promotion: MDPersonalPromotion, delegate: MainPromotionInfoViewControllerDelegate) -> MainPromotionInfoViewController {
 		let mainPromotionInfoViewModel = MainPromotionInfoViewModel(promotion: promotion)
 		let mainPromorionInfoViewController = MainPromotionInfoViewController()
 		mainPromorionInfoViewController.viewModel = mainPromotionInfoViewModel
+		mainPromorionInfoViewController.delegate = delegate
 		
 		return  mainPromorionInfoViewController
 	}
@@ -74,8 +77,10 @@ class DependencyContainer: ViewControllersProvider {
 		return promotionDescriptionViewController
 	}
 	
-	func makePromotionDetailsPagerTabStrip(promotion: MDPersonalPromotion, scrollingDelegate: UITextViewDelegate) -> PromotionDetailsPagerTabStrip {
-		let mainPromotionInfoViewController = makeMainPromotionInfoViewController(promotion: promotion)
+	func makePromotionDetailsPagerTabStrip(promotion: MDPersonalPromotion,
+										   scrollingDelegate: UITextViewDelegate,
+										   mainPromotionInfoViewControllerDelegate: MainPromotionInfoViewControllerDelegate) -> PromotionDetailsPagerTabStrip {
+		let mainPromotionInfoViewController = makeMainPromotionInfoViewController(promotion: promotion, delegate: mainPromotionInfoViewControllerDelegate)
 		
 		let promotionDescriptionViewController = makePromotionDescriptionViewController(promotion: promotion)
 		promotionDescriptionViewController.scrollingDelegate = scrollingDelegate

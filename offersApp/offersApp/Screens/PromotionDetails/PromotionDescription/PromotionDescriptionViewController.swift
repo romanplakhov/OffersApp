@@ -33,11 +33,11 @@ class PromotionDescriptionViewController: UIViewController {
 		descriptionContentView.setContentOffset(CGPoint(x: 0,y: 0), animated: false)
 	}
 	
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
-		
-		descriptionContentView.setContentOffset(CGPoint(x: 0,y: -UIScreen.main.bounds.height*0.33), animated: false)
-	}
+//	override func viewWillDisappear(_ animated: Bool) {
+//		super.viewWillDisappear(animated)
+//		
+//		descriptionContentView.setContentOffset(CGPoint(x: 0,y: -UIScreen.main.bounds.height*0.33), animated: false)
+//	}
 	
 	//MARK: Binding
 	private func bind() {

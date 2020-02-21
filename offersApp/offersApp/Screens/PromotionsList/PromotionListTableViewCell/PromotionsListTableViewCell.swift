@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import SwipeCellKit
+import M13Checkbox
 
 class PromotionsListTableViewCell: SwipeTableViewCell {
 	static let identifier = "PromotionsListTableViewCell"
@@ -33,9 +34,21 @@ class PromotionsListTableViewCell: SwipeTableViewCell {
 		} else {
 			self.contentView.backgroundColor = .white
 		}
+		
+		checkbox.setCheckState(selected ? .checked : .unchecked, animated: true)
 	}
 	
-	var isMultiselected = false
+	func setMultiselectableMode(_ mode: Bool) {
+		isMultiselectableMode = mode
+		
+		checkboxLeadingConstraint.constant = isMultiselectableMode ? shownCheckBoxLeadingConstraintConstant : hiddenCheckBoxLeadingConstraintConstant	}
+	
+	private(set) var isMultiselected = false
+	private(set) var isMultiselectableMode = false
+	
+	private let hiddenCheckBoxLeadingConstraintConstant: CGFloat = -25
+	private let shownCheckBoxLeadingConstraintConstant: CGFloat = 17
+	
 	
 	
 	@IBOutlet private weak var thumbnailImageView: UIImageView!
@@ -44,6 +57,9 @@ class PromotionsListTableViewCell: SwipeTableViewCell {
 	@IBOutlet private weak var discountBadgeView: BadgeView!
 	@IBOutlet private weak var offerTypeBadgeView: BadgeView!
 	@IBOutlet private weak var delimeter: UIView!
+	@IBOutlet weak var checkbox: M13Checkbox!
+	
+	@IBOutlet weak var checkboxLeadingConstraint: NSLayoutConstraint!
 	
 	
     override func awakeFromNib() {
@@ -71,6 +87,8 @@ class PromotionsListTableViewCell: SwipeTableViewCell {
 		thumbnailImageView.layer.masksToBounds = true
 		delimeter.backgroundColor = Config.Colors.neutralColor
 		delimeter.alpha = 0.5
+		checkboxLeadingConstraint.constant = hiddenCheckBoxLeadingConstraintConstant
+		checkbox.tintColor = Config.Colors.primaryTintColor
 	}
     
 }
